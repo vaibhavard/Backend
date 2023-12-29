@@ -65,3 +65,5 @@ COPY python_backend /app/
 RUN pip install -r requirements.txt
 RUN npm install
 EXPOSE 1337
+
+CMD ["bash", "-c", "npm run server & gunicorn --bind 0.0.0.0:1337 app:app"]
