@@ -1,0 +1,14 @@
+Flask
+flask_cors
+requests
+revchatgpt
+gunicorn>=20.1.0
+g4f==0.1.9.0
+tiktoken
+PyExecJS
+pyimgur
+transformers
+werkzeug
+e2b
+openpyxl
+beautifulsoup4
