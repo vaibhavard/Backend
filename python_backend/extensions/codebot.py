@@ -235,9 +235,9 @@ class Codebot:
                         user_input="The code threw an error as mentioned .Please fix the error and output the corrected code."
 
                         if helper.filen==[]:
-                            user_input=gpt4([{"role": "system", "content": f"{helper.rephrase_prompt.format(rephrase=random.choice(helper.rephrase_list),sentence=helper.task_query)}"}],"gpt-3.5-turbo")+"Please note that you have the capability to create anything using Python. Avoid internet searches. Share the complete code."
+                            user_input=helper.task_query+"Please note that you have the capability to create anything using Python. Avoid internet searches. Share the complete code."
                         else:
-                            user_input=gpt4([{"role": "system", "content": f"{helper.rephrase_prompt.format(rephrase=random.choice(helper.rephrase_list),sentence=helper.task_query)}"}],"gpt-3.5-turbo")+f"The file path is {helper.filen}Please note that you have the capability to create anything using Python. Avoid internet searches. Share the complete code."
+                            user_input=helper.task_query+f"The file path is {helper.filen}Please note that you have the capability to create anything using Python. Avoid internet searches. Share the complete code."
 
 
 
