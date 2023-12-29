@@ -66,4 +66,4 @@ RUN pip install -r requirements.txt
 RUN npm install
 EXPOSE 1337
 
-CMD ["bash", "-c", "npm run server & gunicorn --bind 0.0.0.0:1337 --log-level debug app:app"]
+CMD ["bash", "-c", "npm run server & gunicorn --bind 0.0.0.0:1337 --log-level debug --error-logfile gunicorn.error.log --access-logfile gunicorn.log --capture-output app:app"]
