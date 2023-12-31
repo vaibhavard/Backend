@@ -188,8 +188,7 @@ class Codebot:
                     print(e)
                     data["warning"]="Unable to download File as it does not exist /empty/ malformed"
                     pass
-                if info["port"] == "":
-                    self.sandbox.close()
+
 
                 executer=code_blocks  
         except Exception as e:
@@ -294,11 +293,14 @@ class Codebot:
                     try:
                         if data["filename"].lower().endswith(('.png', '.jpg', '.jpeg', '.tiff', '.bmp', '.gif')):
                             embed=f"\n![Code_image]({helper.server}/static/{data['filename']})\n"
-                        embed=embed+f"""
+                            embed=embed+f"""
 You can view your *created files* [here]({helper.server}/static/{data["filename"]})
 """
+                        else:
+                            embed=f"""
+You can view your *created files* [here]({helper.server}/static/{data["filename"]})
+"""   
                         helper.code_q.put(f"\n{embed}\n")
-                        self.sandbox.close()
 
                     except:
                         helper.code_q.put(f"\nNote:View files on {helper.server}\n")
