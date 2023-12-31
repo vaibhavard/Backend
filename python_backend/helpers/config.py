@@ -6,7 +6,7 @@ code_q = queue.Queue() # create a queue to store the response lines
 from memory.memory import Memory
 m = Memory()
 
-api_endpoint = "https://intagpt.onrender.com/conversation"
+api_endpoint = "http://localhost:3000/conversation"
 nline = False
 ans={}
 python_boolean_to_json = {
