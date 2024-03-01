@@ -6,17 +6,25 @@ code_q = queue.Queue() # create a queue to store the response lines
 from memory.memory import Memory
 m = Memory()
 
-api_endpoint = "http://localhost:3000/conversation"
+api_endpoint = "https://intagpt.onrender.com/conversation"
 nline = False
 ans={}
+info_dicts={}
 python_boolean_to_json = {
   "true": True,
 }
 worded=""
 stopped=False
-about="""                                     
->Graphs
-**/mindmap  /flowchart  /complexchart  /linechart  /branchchart /timeline**
+about="""   
+## Features and Commands:                                  
+1)Available Graphs:**/mindmap  /flowchart  /complexchart  /linechart  /branchchart /timeline**
+
+2)Code Interpreter:
+**/aigen** : Run this command to create and run code in a code sandbox.
+
+3)Image Uploads and Recognition:Upload through camera
+
+4)Free GPT-4 through reverse engineered providers.
 """
 
 up="""<!DOCTYPE html>
@@ -35,4 +43,4 @@ task_query=""
 server="https://opengpt-4ik5.onrender.com/"
 filen=[]
 
-installed_packages=['pandas', 'opencv-python', 'imageio', 'scikit-learn', 'spacy', 'bokeh', 'pytest', 'aiohttp', 'python-docx', 'nltk', 'textblob', 'beautifulsoup4', 'seaborn', 'plotly', 'tornado', 'matplotlib', 'xarray', 'librosa', 'gensim', 'soundfile', 'pytz', 'requests', 'scikit-image', 'xlrd', 'scipy', 'numpy', 'openpyxl', 'joblib', 'urllib3']
+installed_packages=['pandas', 'opencv-python', 'imageio', 'scikit-learn', 'spacy', 'bokeh', 'pytest', 'aiohttp', 'python-docx', 'nltk', 'textblob', 'beautifulsoup4', 'seaborn', 'plotly', 'tornado', 'matplotlib', 'xarray', 'librosa', 'gensim', 'soundfile', 'pytz', 'requests', 'scikit-image', 'xlrd', 'scipy', 'numpy', 'openpyxl', 'joblib', 'urllib3','streamlit']

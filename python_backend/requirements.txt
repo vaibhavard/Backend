@@ -3,7 +3,7 @@ flask_cors
 requests
 revchatgpt
 gunicorn>=20.1.0
-g4f==0.1.9.0
+g4f
 tiktoken
 PyExecJS
 pyimgur
@@ -12,3 +12,7 @@ werkzeug
 e2b
 openpyxl
 beautifulsoup4
+google-generativeai
+Pillow
+requests_futures
+langchain_core

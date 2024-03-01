@@ -59,10 +59,9 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
 
 
 WORKDIR /app/
-COPY node_backend /app/
-COPY python_backend /app/
-
+# COPY node_backend /app/
+COPY python_backend/requirements.txt /app/requirements.txt
 RUN pip install -r requirements.txt
-RUN npm install
+# RUN npm install
 EXPOSE 1337
 

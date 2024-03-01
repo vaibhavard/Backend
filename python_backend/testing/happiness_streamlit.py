@@ -1,0 +1,3 @@
+"st.title('Happiness Dashboard')\nst.write('Welcome to the Happiness Dashboard. This app allows you to explore various factors that influence happiness.')" 
+"st.slider('Rate your happiness (0 to 10): ', 0, 10, 5)\nst.text_input('What makes you happy?')" 
+"import matplotlib.pyplot as plt\n\nhappiness_ratings = [st.session_state.get('happiness_rating', [])]\n\nplt.figure(figsize=(10, 6))\nplt.hist(happiness_ratings, bins=range(11), edgecolor='black')\nplt.title('Happiness Rating Distribution')\nplt.xlabel('Happiness Rating')\nplt.ylabel('Number of Responses')\nplt.xticks(range(11))\nplt.show()\nst.pyplot()" 

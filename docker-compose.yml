@@ -4,14 +4,23 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    # volumes:
-    #   - type: bind
-    #     source: .
-    #     target: /app
     volumes:
-      - ./node_backend/settings.js:/app/settings.js:cached
-    working_dir: /app
+      # - type: bind
+      #   source: .
+      #   target: /app
+    - ./:/app
+
+    #   - type: bind
+    #     source: node_backend/
+    #     target: /app
+      # - ./node_backend/settings.js:/app/settings.js:cached
+      # - ./node_backend:/app
+      # - ./python_backend:/app
+
+    working_dir: /app/
     ports: 
       - '${APP_PORT:-1337}:1337'
     command:  
-      bash -c "npm run server & gunicorn --bind 0.0.0.0:1337 -w 2 app:app"
+      # bash -c "npm run node_backend/server & gunicorn --bind 0.0.0.0:1337 -w 3 app:app --chdir python_backend/"
+      bash -c "gunicorn --bind 0.0.0.0:1337 -w 3 app:app --chdir python_backend/ --preload"
+      # bash -c "ls"

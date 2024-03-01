@@ -65,14 +65,12 @@ def grapher(msg,model):
     t=time.time()
     print("Creating..")
     helper.worded=""
-    yield 'data: %s\n\n' % json.dumps(helper.streamer(">Please wait."), separators=(',' ':'))
-
     t1 = threading.Thread(target=send_req,args=(msg,model,))
     t1.start()
     sent=False
     while helper.worded=="":
         if 10>time.time()-t>9 and not sent:
-            yield 'data: %s\n\n' % json.dumps(helper.streamer(">Please wait."), separators=(',' ':'))
+            yield 'data: %s\n\n' % json.dumps(helper.streamer(">Please wait Patiently (This might take upto 2 minutes) ."), separators=(',' ':'))
             sent=True
         if sent:
             yield 'data: %s\n\n' % json.dumps(helper.streamer("."), separators=(',' ':'))

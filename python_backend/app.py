@@ -5,10 +5,8 @@ from flask_cors import CORS
 import helpers.helper as helper
 from helpers.provider import *
 from transformers import AutoTokenizer
-import extensions
-from base64 import b64encode
-from utils.llms import gpt4,gpt4stream,get_providers
-import pyimgur
+import extensions.extensions
+from utils.llms import gpt4,gpt4stream,get_providers,summaries
 app = Flask(__name__)
 CORS(app)
 import queue
@@ -16,54 +14,103 @@ from utils.functions import allocate,clear,clear2
 from extensions.codebot import Codebot
 from werkzeug.utils import secure_filename
 import os
-app.config['DEBUG'] = True
-
+from PIL import Image
 
 app.config['UPLOAD_FOLDER'] = "static"
 
 @app.route("/v1/chat/completions", methods=['POST'])
+@app.route("/chat/completions", methods=['POST'])
 def chat_completions2():
     helper.stopped=True
-
     streaming = req.json.get('stream', False)
-    model = req.json.get('model', 'gpt-4')
+    model = req.json.get('model', 'gpt-4-turbo')
     messages = req.json.get('messages')
     api_keys = req.headers.get('Authorization').replace('Bearer ', '')
+    functions = req.json.get('functions')
+    tools = req.json.get('tools')
+    print(functions)
+    if functions!=None:
 
-    if  helper.m.get_data(str(api_keys)) == None:
-        helper.m.add_data(str(api_keys),{})
-        helper.m.save() 
-
-    allocate(messages,helper.data, m.get_data('uploaded_image'),m.get_data('context'),api_keys,model)
+        allocate(messages,helper.data, m.get_data('uploaded_image'),m.get_data('context'),api_keys,model,functions)
+    elif tools!=None:
+        allocate(messages,helper.data, m.get_data('uploaded_image'),m.get_data('context'),api_keys,model,tools)
+    else:
+        allocate(messages,helper.data, m.get_data('uploaded_image'),m.get_data('context'),api_keys,model,[])
 
     t = time.time()
 
-    def stream_response(messages,model,api_keys):
+    def stream_response(messages,model,api_keys="",functions=[],tools=[]):
         helper.q = queue.Queue() # create a queue to store the response lines
 
         if  helper.stopped:
             helper.stopped = False
             print("No process to kill.")
+        text=""
 
         threading.Thread(target=gpt4stream,args=(messages,model,api_keys)).start() # start the thread
         
         started=False
         while True: # loop until the queue is empty
             try:
-                if 11>time.time()-t>10 and not started and  m.get_data('uploaded_image')!="":
+                if 9>time.time()-t>7 and not started and  "imageURL" in helper.data:
                     yield 'data: %s\n\n' % json.dumps(helper.streamer("> Analysing this Image🖼️"), separators=(',' ':'))
                     time.sleep(2)
-                elif 11>time.time()-t>10 and not started :
-                    yield "WAIT"
-                    time.sleep(1)  
-                elif 11>time.time()-t>10 and not started :
+                elif 15>time.time()-t>13 and not started :
                     yield 'data: %s\n\n' % json.dumps(helper.streamer("> Please wait"), separators=(',' ':'))
                     time.sleep(2)
-                elif time.time()-t>11 and not started :
+                elif time.time()-t>15 and not started :
                     yield 'data: %s\n\n' % json.dumps(helper.streamer("."), separators=(',' ':'))
                     time.sleep(1)
                 elif time.time()-t>15 and not started and  m.get_data('uploaded_image')=="":
                     yield 'data: %s\n\n' % json.dumps(helper.streamer("\n\n**Trying to contact server again**\n\n"), separators=(',' ':'))
+                    time.sleep(1)
+                if time.time()-t>100 and not started:
+                    yield 'data: %s\n\n' % json.dumps(helper.streamer("Timed out"), separators=(',' ':'))
+                    break
+
+                line = helper.q.get(block=False)
+                text=text+line
+                if line == "END":
+                    if functions !=None:
+                        yield f'data: {json.dumps(helper.stream_func(text,"functions"))}\n\n'
+                    elif tools !=None:
+                        yield f'data: {json.dumps(helper.stream_func(text,"tools"))}\n\n'
+                    else:
+                        yield f'data: {json.dumps(helper.end())}\n\n'
+                    break
+                if not started:
+                    started = True
+                    yield 'data: %s\n\n' % json.dumps(helper.streamer("\n\n"), separators=(',' ':'))
+
+                yield 'data: %s\n\n' % json.dumps(helper.streamer(line), separators=(',' ':'))
+
+                helper.q.task_done() # mark the task as done
+
+
+            except helper.queue.Empty: 
+                pass
+            except Exception as e:
+                print(e)
+    def contextgen(messages):
+        helper.q = queue.Queue() # create a queue to store the response lines
+
+        if  helper.stopped:
+            helper.stopped = False
+            print("No process to kill.")
+
+        threading.Thread(target=summaries,args=(helper.data["message"],)).start() # start the thread
+        
+        started=False
+        while True: # loop until the queue is empty
+            try:
+                if 11>time.time()-t>10 and not started :
+                    yield "WAIT"
+                    time.sleep(1)  
+                elif 4>time.time()-t>1 and not started :
+                    yield 'data: %s\n\n' % json.dumps(helper.streamer("> Please wait while your text is being processed"), separators=(',' ':'))
+                    time.sleep(3)
+                elif time.time()-t>9 and not started :
+                    yield 'data: %s\n\n' % json.dumps(helper.streamer("."), separators=(',' ':'))
                     time.sleep(1)
                 if time.time()-t>100 and not started:
                     yield 'data: %s\n\n' % json.dumps(helper.streamer("Timed out"), separators=(',' ':'))
@@ -85,7 +132,6 @@ def chat_completions2():
                 pass
             except Exception as e:
                 print(e)
-
 
     def aigen(model):
         helper.code_q = queue.Queue() # create a queue to store the response lines
@@ -127,40 +173,23 @@ def chat_completions2():
                 print(e)
 
 
-    if "/clear" in helper.data["message"]  :
-        m.update_data('uploaded_image', "")
-        m.update_data('context', "")
-        m.save() 
-        return 'data: %s\n\n' % json.dumps(helper.streamer('Cleared✅ '+clear()), separators=(',' ':'))
     
-    elif "/log" in helper.data["message"]  :
+    if "/log" in helper.data["message"] and streaming  :
         return 'data: %s\n\n' % json.dumps(helper.streamer(str(data)), separators=(',' ':'))
 
 
-    elif "/fileserver" in helper.data["message"]  :
-        f=open("memory/memory.json", "r")
-        return 'data: %s\n\n' % json.dumps(helper.streamer(str(f.read())), separators=(',' ':'))
-
-
-    elif "/prompt" in helper.data["message"]  :
-
-        if helper.systemp == False:
-            helper.systemp=True
-        else:
-            helper.systemp=False
-        return 'data: %s\n\n' % json.dumps(helper.streamer(f"helper.Systemprompt is  {helper.systemp}"), separators=(',' ':'))
-
-    elif "/gethelp" in helper.data["message"]  :
+    elif "/gethelp" in helper.data["message"]  and streaming :
         return 'data: %s\n\n' % json.dumps(helper.streamer(helper.about), separators=(',' ':'))
     
     
-    if "/getproviders" in helper.data["message"] :
+    if "/getproviders" in helper.data["message"] and streaming :
         return 'data: %s\n\n' % json.dumps(helper.streamer(get_providers()), separators=(',' ':'))
     
-    if "/mindmap" in helper.data["message"] or "/branchchart" in helper.data["message"] or "/timeline" in helper.data["message"] :
-        return app.response_class(extensions.grapher(helper.data["message"],model), mimetype='text/event-stream')
+    if "/mindmap" in helper.data["message"] or "/branchchart" in helper.data["message"] or "/timeline" in helper.data["message"] and streaming :
+        return app.response_class(extensions.extensions.grapher(helper.data["message"],model), mimetype='text/event-stream')
     
-    elif "/flowchart" in helper.data["message"] or "/complexchart" in helper.data["message"] or  "/linechart" in helper.data["message"] :
+    elif "/flowchart" in helper.data["message"] or "/complexchart" in helper.data["message"] or  "/linechart" in helper.data["message"] and streaming:
+        print(f"----{model}--")
         if "gpt-3" in model:
             if "/flowchart" in  helper.data["message"]:
                 return app.response_class(stream_response([{"role": "system", "content": f"{flowchat}"},{"role": "user", "content": f"{data['message'].replace('/flowchart','')}"}],"gpt-3"), mimetype='text/event-stream')
@@ -187,37 +216,40 @@ def chat_completions2():
 
 
     if not streaming and "AI conversation titles assistant" in messages[0]["content"]:
-        print("USING GPT_4 CONVERSATION TITLE")
-        k=gpt4(messages,"gpt-3.5-turbo")
+        print("USING GPT_3 CONVERSATION TITLE")
+        k=gpt4(messages,"Bard")
         return helper.output(k)
+
     elif not streaming :
-        if True:
+        if functions != None :
+            k=gpt4(messages,model)
+            return helper.func_output(k,"functions")
+        elif tools!=None:
+
+            k=gpt4(messages,model)
+            return helper.func_output(k,"tools")
+
+        else:
+
             print("USING GPT_4 NO STREAM")
             print(model)
 
             k=gpt4(messages,model)
-            print(k)
             return helper.output(k)
-    if  streaming and "/aigen" not in helper.data["message"] and model!="gpt-4-code": 
-        return app.response_class(stream_response(messages,model,api_keys), mimetype='text/event-stream')
-    elif streaming and "/aigen" in helper.data["message"]  and model!="gpt-4-code":
-        codebot=Codebot()
-        helper.task_query=helper.data["message"].replace("/aigen","")
+    if streaming and "AI conversation titles assistant" in messages[0]["content"] and model!="gpt-4-LargeTextSummariser":
+        return app.response_class(stream_response(messages,"Bard",api_keys), mimetype='text/event-stream')
 
+
+    elif  streaming  : 
+        return app.response_class(stream_response(messages,model,api_keys,functions,tools), mimetype='text/event-stream')
+    elif streaming and( "/aigen" in helper.data["message"]  or messages[0]["content"] == helper.new_prompt) :
+        codebot=Codebot(msg_dict=messages)
         return app.response_class(aigen(model), mimetype='text/event-stream')
-
-    elif model=="gpt-4-code":
-        return app.response_class(aigen(model), mimetype='text/event-stream')
-
-
+    # and "/aigen" not in helper.data["message"] and  messages[0]["content"] != helper.new_prompt and model!="gpt-4-LargeTextSummariser"
+    if model =="gpt-4-LargeTextSummariser" and streaming:
+        return app.response_class(contextgen(messages), mimetype='text/event-stream')
 
 
-
-@app.route('/api/<name>')
-def hello_name(name):
-   url = "https://"+name
-   helper.server=url
-   return f'{helper.server}'
 
 @app.route('/context', methods=['POST'])
 def my_form_post():
@@ -227,12 +259,9 @@ def my_form_post():
     except:
         pass
 
-    if text!="image":
-        m.update_data('context', text)
-        m.save()
-    else:
+    if text=="image":
         try:
-            link= f"https://codegen-server.onrender.com/static/{req.form['filename']}"
+            link= f"{helper.server}/static/{req.form['filename']}"
             m.update_data('uploaded_image',link)
             m.save()        
             print(link)
@@ -265,6 +294,13 @@ def index():
         if file :
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            if ("camera" in file.filename or "capture" in file.filename or "IMG" in file.filename or "Screenshot"  in file.filename) :
+                img=Image.open(f"static/{filename}")
+                img.thumbnail((512, 512),Image.Resampling.LANCZOS)
+
+                img.save(f"static/{filename}")
+
+            return filename
  
  
     # Get Files in the directory and create list items to be displayed to the user
@@ -290,29 +326,7 @@ def index():
  
     return return_html
 
-@app.route('/upload_image', methods=['GET', 'POST']) #Obsolete
-def upload():
-    global img
-    if req.method == 'POST': 
-        file=req.files['file1']
-        print(file.filename)
-        if 'file1' not in req.files: 
-            print("EROR")
-            return 'there is no file1 in form!'
-        client = pyimgur.Imgur("47bb97a5e0f539c")
-        r = client._send_request('https://api.imgur.com/3/image', method='POST', params={'image': b64encode(file.read())})
-        m.update_data('uploaded_image', r["link"])
-        m.save()        
-        print("image saved")
-        return f"[Image Uploaded]"
 
-    return '''
-    <h1>Upload new Image</h1>
-    <form method="post" enctype="multipart/form-data">
-      <input type="file" name="file1">
-      <input type="submit">
-    </form>
-    '''
 
 def get_embedding(input_text, token):
     huggingface_token = helper.huggingface_token
@@ -401,8 +415,8 @@ def models():
 
 if __name__ == '__main__':
     config = {
-        'host': '0.0.0.0',
-        'port': 1337,
+        'host': 'localhost',
+        'port': 1331,
         'debug': True,
     }
 

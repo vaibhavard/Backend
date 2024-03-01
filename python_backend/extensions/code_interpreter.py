@@ -7,7 +7,7 @@ from pydantic import BaseModel, PrivateAttr
 
 from e2b import EnvVars, Sandbox
 TIMEOUT=300
-
+import datetime
 logger = logging.getLogger(__name__)
 
 
@@ -32,6 +32,7 @@ class Anycreator(Sandbox):
 
     def __init__(
         self,
+        sid: Optional[str] = None,
         api_key: Optional[str] = None,
         cwd: Optional[str] = None,
         env_vars: Optional[EnvVars] = None,
@@ -43,6 +44,13 @@ class Anycreator(Sandbox):
         **kwargs,
     ):
         self.on_artifact = on_artifact
+        running_sandboxes = Sandbox.list(api_key=api_key)
+
+        # Find the sandbox by metadata
+
+
+
+        # else:
         super().__init__(
             template=self.template,
             api_key=api_key,
@@ -52,8 +60,28 @@ class Anycreator(Sandbox):
             on_stdout=on_stdout,
             on_stderr=on_stderr,
             on_exit=on_exit,
+            metadata={"user_id":str( sid)},
             **kwargs,
         )
+        self.reconnect(sandbox_id="ibuy0fz64bopsh88swrck-bcb43d8a",api_key=api_key)
+
+        # for running_sandbox in running_sandboxes:
+        #     print(running_sandbox)
+        #     if running_sandbox.metadata != None:
+        #         if running_sandbox.metadata.get("user_id", "") == sid and running_sandbox.sandbox_id != self.id :
+        #             print(running_sandbox.started_at)
+        #             super().reconnect(sandbox_id=running_sandbox.sandbox_id,api_key=api_key)
+        #             print("-"*100)
+        #             break
+        #         else:
+        #             try:
+        #                 sb=Sandbox.reconnect(sandbox_id=running_sandbox.sandbox_id,api_key=api_key)
+        #                 sb.close()
+        #             except Exception as e:
+        #                 print(e)
+
+        print(self.id)
+                
         self.process.start_and_wait("sudo chmod -R 777 /home",on_stdout=print,on_stderr=print)
         print("Changed permissions")
 

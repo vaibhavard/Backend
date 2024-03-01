@@ -4,6 +4,9 @@ import random
 import asyncio
 from utils.functions import check_content
 from openpyxl import Workbook
+import google.generativeai as genai
+genai.configure(api_key="AIzaSyBSvofa9eQ2_wEo_Tl_Xf4I_LYUUSTHki0")
+modell = genai.GenerativeModel('gemini-pro')
 
 async def run_provider(provider: helper.g4f.Provider.BaseProvider,messages):
     try:
@@ -35,20 +38,42 @@ def get_providers():
     asyncio.run(run_all())
     return str(helper.providers)
 
-def gpt4(messages,model="gpt-4"):
-    print("GPT$ NO STREAM")
+def summaries(query):
+    chunks = split_file(query)
 
-    if "gpt-3" in check(helper.api_endpoint):
+    # Use the number of available CPU cores
+    pool = Pool(os.cpu_count(), initializer=init_worker)
+    try: 
+        # Map the worker function to the chunks and collect the
+        # in order as they are completed
+        summaries = pool.map(worker, chunks)
+    except KeyboardInterrupt: 
+        pool.terminate()
+    else: 
+        pool.close()
+    pool.join()
+
+    # Combine the summaries
+    summary = "\n".join(summaries)
+    helper.q.put(summary) 
+    time.sleep(0.5)
+    helper.q.put("END") # mark the task as done
+
+def gpt4(messages,model="gpt-4"):
+    print("GPT NO STREAM")
+
+    if "gpt-3" in check(helper.api_endpoint) and "Bard" not in model:
         model="gpt-3"
 
+
+
     if "gpt-4" in model :
+        print("sending..")
 
         try:
             helper.data["stream"]=False
             json_body=ask("","",helper.api_endpoint,helper.data)
             helper.data["stream"]=True
-            if "gpt-4-turbo"  in model:
-                helper.data['parentMessageId'] = json_body['messageId']
             return json_body['response']
         
         except Exception as e:
@@ -56,23 +81,17 @@ def gpt4(messages,model="gpt-4"):
             model="gpt-3"
 
 
-    if "gpt-3" in model:
-
-        for provider in helper.providers:
-            try:
-
-                response = helper.g4f.ChatCompletion.create(
-                    model="gpt-3.5-turbo",provider=provider ,
-                    messages=messages,
-                    stream=False)
-                print(response)
-                return response
-            except Exception as e:
-                print(e)
-                pass
-
+    if "Bard" in model:
+            print("USING BARD")
             
-
+            query="".join(
+                        f"[{message['role']}]" + ("(#message)" if message['role']!="system" else "(#instructions)") + f"\n{message['content']}\n\n"
+                        for message in messages
+                    )       
+                     
+            response = modell.generate_content(query)
+            print(response.text)
+            return response.text
 
 def gpt4stream(messages,model,api_keys):
     print(f"-------{model}--------")
@@ -84,7 +103,6 @@ def gpt4stream(messages,model,api_keys):
 
     if "gpt-4" in model :
         try:
-            print(helper.data)
           
             with requests.post(helper.api_endpoint, json=helper.data, stream=True) as resp:
                 for line in resp.iter_lines():
@@ -96,6 +114,7 @@ def gpt4stream(messages,model,api_keys):
                         break
 
                     if line and "result" not in line.decode() and "conversationId" not in line.decode() and "[DONE]" not in line.decode():
+
                         line=line.decode()
                         line=line.replace("://","ui34d")
 
@@ -108,14 +127,21 @@ def gpt4stream(messages,model,api_keys):
                             ee=str(e)
                         if parsed_data!={} and parsed_data.get("data") != None:
                             msg=parsed_data['data'].replace("ui34d","://")
-                            
-                            helper.q.put(msg) 
+                            if ("Dependencies" in msg or "Installing" in msg or "Code Output" in msg) and messages[0]["content"]==helper.new_prompt:
+                                helper.q.put("END") 
+                                break
+                            else:
+
+
+                                helper.q.put(msg) 
 
                     elif line and "conversationId"  in line.decode():
 
                         json_body = line.decode().replace("data: ","")
                         json_body = json.loads(json_body)
-                        print(json_body)
+                        
+                        helper.session.get(f"https://api.telegram.org/bot{helper.TOKEN}/sendMessage?chat_id={helper.chat_id}&text=reply:{str(json_body['response'])}")
+
                         try:
                             table = check_content(str(json_body["response"]), 'https://api.github.com', True, None, None, None)
 
@@ -139,8 +165,9 @@ def gpt4stream(messages,model,api_keys):
                                     ws.append(body_values)
 
                                 # Save the workbook to an Excel file
-                                wb.save(f'static/table{random.randint(1,1000)}.xlsx')
-                                helper.q.put(f"\n[View in excel]({helper.server}/static/table.xlsx)") 
+                                filenamee=f"table{random.randint(1,1000)}.xlsx"
+                                wb.save(f'static/{filenamee}')
+                                helper.q.put(f"\n\n[View Table in excel]({helper.server}/static/{filenamee})") 
                         except:
                             pass
                         try:
@@ -163,7 +190,7 @@ def gpt4stream(messages,model,api_keys):
                             print(e)
                             pass
 
-                        if "gpt-4-turbo"  in model:
+                        if "gpt-4-turbosss"  in model:
                             updated={**helper.m.get_data(str(api_keys)),**{f"{str(model)}_{messages[1]['content']}":json_body['messageId']}}
                             helper.m.update_data(str(api_keys),updated)
                             helper.m.save()
@@ -177,7 +204,7 @@ def gpt4stream(messages,model,api_keys):
         except Exception as e:
             print(e)
             # model="gpt-3"
-            helper.q.put("> Falling back to gpt-3\n\n")
+            # helper.q.put(f"> Unexpected Error(Try Again😀?):{e} ")
 
     
     if "gpt-3" in model:
@@ -198,23 +225,32 @@ def gpt4stream(messages,model,api_keys):
                 print(e)
                 pass
         helper.q.put("END") # mark the task as done
+    if "gpt-4-0125" in model:
 
+        try:
+
+
+            response = helper.g4f.ChatCompletion.create(
+                model="gpt-4",provider=helper.g4f.Provider.Liaobots ,
+                messages=messages,
+                stream=True,)
+            for message in response:
+                helper.q.put(message)
+        except Exception as e:
+            print(e)
+            pass
+        helper.q.put("END") # mark the task as done
     if "Bard" in model  :
-            del messages[0]
-            print("Bard")
-
-            try:
-
-                response = helper.g4f.ChatCompletion.create(
-                    model=helper.g4f.models.default,provider=helper.g4f.Provider.Bard ,
-                    messages=messages,
-                    cookies=helper.google_cookies,
-                    auth=True
-                    )
-                helper.q.put(response)
-            except:
-                pass
-            helper.q.put("END") # mark the task as done
+            
+            query="".join(
+                        f"[{message['role']}]" + ("(#message)" if message['role']!="system" else "(#instructions)") + f"\n{message['content']}\n\n"
+                        for message in messages
+                    )       
+                     
+            response = modell.generate_content(query)
+            print(response.text)
+            helper.q.put(response.text)
+            helper.q.put("END")
     elif "openchat" in model or "llama" in model:
             try:
 
