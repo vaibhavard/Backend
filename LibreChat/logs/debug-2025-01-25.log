@@ -1,0 +1,1942 @@
+2025-01-25T08:28:46.953Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T08:29:18.340Z error: KeyvMongo connection error: connect ECONNREFUSED 172.20.0.4:27017
+2025-01-25T08:29:38.184Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T08:29:50.155Z info: Connected to MongoDB
+2025-01-25T08:29:52.375Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T08:29:52.376Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T08:29:53.359Z error: Config file YAML format is invalid: ENOENT: no such file or directory, open '/app/librechat.yaml'
+2025-01-25T08:29:53.369Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T08:29:53.371Z warn: Default value for CREDS_IV is being used.
+2025-01-25T08:29:53.372Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T08:29:53.373Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T08:29:53.374Z info: Please replace any default secret values.
+2025-01-25T08:29:53.376Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T08:29:55.785Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T08:29:55.940Z info: Updating 'USER' role MULTI_CONVO 'USE' permission from false to: true
+2025-01-25T08:29:55.977Z info: Updated 'USER' role permissions
+2025-01-25T08:29:55.981Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T08:29:56.004Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T08:32:27.238Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T08:32:59.595Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T08:33:46.535Z debug: [AskController]
+{
+  text: "hi",
+  conversationId: null,
+  // 1 example(s)
+  examples: [{"input":{"content":""},"output":{"content":""}}],
+  endpoint: "google",
+  resendFiles: true,
+    modelOptions.model: "gemini-pro",
+  modelsConfig: "exists",
+}
+2025-01-25T08:33:46.656Z debug: [BaseClient] Loading history:
+{
+  conversationId: "9135ba2b-2599-4e9e-a8b0-af237b5a14f0",
+  parentMessageId: "00000000-0000-0000-0000-000000000000",
+}
+2025-01-25T08:33:46.673Z debug: [GoogleClient] buildMessages
+{
+  // 1 instance(s)
+  instances: [{"messages":[{"lc":1,"type":"constructor","id":["langchain_core","messages","HumanMessage"],"kwargs"... [truncated]],
+    parameters.model: "gemini-pro",
+    // 3 stop(s)
+    parameters.stop: ["||>","\nUser:","<|diff_marker|>"],
+}
+2025-01-25T08:33:46.679Z debug: Creating Chat Google Generative AI client
+2025-01-25T08:33:46.778Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T08:33:51.797Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T08:33:51.828Z debug: [AskController] Request closed
+2025-01-25T08:33:51.855Z debug: [GoogleClient] buildMessages
+{
+  // 1 instance(s)
+  instances: [{"messages":[{"lc":1,"type":"constructor","id":["langchain_core","messages","HumanMessage"],"kwargs"... [truncated]],
+    parameters.model: "gemini-pro",
+    // 3 stop(s)
+    parameters.stop: ["||>","\nUser:","<|diff_marker|>"],
+}
+2025-01-25T08:33:51.858Z debug: Initialized title client options
+2025-01-25T08:33:51.858Z debug: Creating Chat Google Generative AI client
+2025-01-25T08:33:51.859Z debug: Beginning titling
+2025-01-25T08:33:56.209Z debug: Title response: Conversational Greeting
+2025-01-25T08:33:56.209Z debug: [saveConvo] api/server/services/Endpoints/google/addTitle.js
+2025-01-25T11:42:53.446Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T11:43:20.385Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T11:43:27.275Z info: Connected to MongoDB
+2025-01-25T11:43:28.090Z debug: [indexSync] There are 2 messages and 2 indexed
+2025-01-25T11:43:28.091Z debug: [indexSync] There are 1 convos and 1 indexed
+2025-01-25T11:43:28.207Z error: Config file YAML format is invalid: ENOENT: no such file or directory, open '/app/librechat.yaml'
+2025-01-25T11:43:28.210Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T11:43:28.212Z warn: Default value for CREDS_IV is being used.
+2025-01-25T11:43:28.213Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T11:43:28.223Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T11:43:28.225Z info: Please replace any default secret values.
+2025-01-25T11:43:28.226Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T11:43:30.144Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T11:43:30.238Z info: No changes needed for 'USER' role permissions
+2025-01-25T11:43:30.255Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T11:43:30.292Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T11:43:36.363Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T11:43:36.480Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T11:44:25.152Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T11:44:43.503Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T11:44:49.406Z info: Connected to MongoDB
+2025-01-25T11:44:49.931Z debug: [indexSync] There are 2 messages and 2 indexed
+2025-01-25T11:44:49.932Z debug: [indexSync] There are 1 convos and 1 indexed
+2025-01-25T11:44:50.027Z error: Config file YAML format is invalid: ENOENT: no such file or directory, open '/app/librechat.yaml'
+2025-01-25T11:44:50.029Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T11:44:50.031Z warn: Default value for CREDS_IV is being used.
+2025-01-25T11:44:50.032Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T11:44:50.033Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T11:44:50.034Z info: Please replace any default secret values.
+2025-01-25T11:44:50.035Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T11:44:50.787Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T11:44:50.831Z info: No changes needed for 'USER' role permissions
+2025-01-25T11:44:50.836Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T11:44:50.852Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T11:44:53.039Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T11:44:53.882Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T11:45:04.062Z debug: [AskController]
+{
+  text: "hi",
+  conversationId: null,
+  // 1 example(s)
+  examples: [{"input":{"content":""},"output":{"content":""}}],
+  endpoint: "google",
+  resendFiles: true,
+    modelOptions.model: "gemini-2.0-flash-thinking-exp-01-21",
+  modelsConfig: "exists",
+}
+2025-01-25T11:45:04.099Z debug: [BaseClient] Loading history:
+{
+  conversationId: "64ac0275-2f12-426f-865a-831b43f68c0a",
+  parentMessageId: "00000000-0000-0000-0000-000000000000",
+}
+2025-01-25T11:45:04.115Z debug: Creating GenAI client
+2025-01-25T11:45:04.190Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T11:45:07.210Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T11:45:07.231Z debug: [AskController] Request closed
+2025-01-25T11:45:07.257Z debug: [GoogleClient] buildMessages
+{
+  // 1 instance(s)
+  instances: [{"messages":[{"lc":1,"type":"constructor","id":["langchain_core","messages","HumanMessage"],"kwargs"... [truncated]],
+    parameters.model: "gemini-pro",
+    // 3 stop(s)
+    parameters.stop: ["||>","\nUser:","<|diff_marker|>"],
+}
+2025-01-25T11:45:07.258Z debug: Initialized title client options
+2025-01-25T11:45:07.258Z debug: Creating Chat Google Generative AI client
+2025-01-25T11:45:07.260Z debug: Beginning titling
+2025-01-25T11:45:11.524Z debug: Title response: Warmly Welcoming Users
+2025-01-25T11:45:11.525Z debug: [saveConvo] api/server/services/Endpoints/google/addTitle.js
+2025-01-25T12:03:10.048Z debug: [AskController]
+{
+  text: "using html5 and webgl create a beautiful visualisation of a milk drop",
+  conversationId: null,
+  // 1 example(s)
+  examples: [{"input":{"content":""},"output":{"content":""}}],
+  endpoint: "google",
+  resendFiles: true,
+    modelOptions.model: "gemini-2.0-flash-thinking-exp-01-21",
+  artifactsPrompt: "The assistant can create and reference artifacts during conversations.\n\nArtifacts are for substantia... [truncated]",
+  modelsConfig: "exists",
+}
+2025-01-25T12:03:10.055Z debug: [BaseClient] Loading history:
+{
+  conversationId: "ab8fd555-074a-4049-9a61-ca6e1264bb27",
+  parentMessageId: "00000000-0000-0000-0000-000000000000",
+}
+2025-01-25T12:03:10.063Z debug: Creating GenAI client
+2025-01-25T12:03:10.076Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T12:03:39.913Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T12:03:39.932Z debug: [AskController] Request closed
+2025-01-25T12:03:39.950Z debug: [GoogleClient] buildMessages
+{
+  // 1 instance(s)
+  instances: [{"messages":[{"lc":1,"type":"constructor","id":["langchain_core","messages","HumanMessage"],"kwargs"... [truncated]],
+    parameters.model: "gemini-pro",
+    // 3 stop(s)
+    parameters.stop: ["||>","\nUser:","<|diff_marker|>"],
+}
+2025-01-25T12:03:39.952Z debug: Initialized title client options
+2025-01-25T12:03:39.952Z debug: Creating Chat Google Generative AI client
+2025-01-25T12:03:39.953Z debug: Beginning titling
+2025-01-25T12:03:44.517Z debug: Title response: WebGL Milk Drop Visualization
+2025-01-25T12:03:44.518Z debug: [saveConvo] api/server/services/Endpoints/google/addTitle.js
+2025-01-25T12:19:06.821Z debug: [AskController]
+{
+  text: "hi",
+  conversationId: null,
+  // 1 example(s)
+  examples: [{"input":{"content":""},"output":{"content":""}}],
+  endpoint: "google",
+  resendFiles: true,
+    modelOptions.model: "gemini-2.0-flash-thinking-exp-01-21",
+  artifactsPrompt: "The assistant can create and reference artifacts during conversations.\n\nArtifacts are for substantia... [truncated]",
+  modelsConfig: "exists",
+}
+2025-01-25T12:19:06.839Z debug: [BaseClient] Loading history:
+{
+  conversationId: "26d4c7ef-4dfb-413a-ae49-3175e671ca87",
+  parentMessageId: "00000000-0000-0000-0000-000000000000",
+}
+2025-01-25T12:19:06.856Z debug: Creating GenAI client
+2025-01-25T12:19:06.872Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T12:19:09.713Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T12:19:09.732Z debug: [AskController] Request closed
+2025-01-25T12:19:09.749Z debug: [GoogleClient] buildMessages
+{
+  // 1 instance(s)
+  instances: [{"messages":[{"lc":1,"type":"constructor","id":["langchain_core","messages","HumanMessage"],"kwargs"... [truncated]],
+    parameters.model: "gemini-pro",
+    // 3 stop(s)
+    parameters.stop: ["||>","\nUser:","<|diff_marker|>"],
+}
+2025-01-25T12:19:09.753Z debug: Initialized title client options
+2025-01-25T12:19:09.754Z debug: Creating Chat Google Generative AI client
+2025-01-25T12:19:09.755Z debug: Beginning titling
+2025-01-25T12:19:10.787Z debug: Title response: Hello There
+2025-01-25T12:19:10.789Z debug: [saveConvo] api/server/services/Endpoints/google/addTitle.js
+2025-01-25T12:19:29.234Z debug: [AskController]
+{
+  text: "hmm",
+  conversationId: "26d4c7ef-4dfb-413a-ae49-3175e671ca87",
+  // 1 example(s)
+  examples: [{"input":{"content":""},"output":{"content":""}}],
+  endpoint: "google",
+  resendFiles: true,
+    modelOptions.model: "gemini-2.0-flash-exp",
+  artifactsPrompt: "The assistant can create and reference artifacts during conversations.\n\nArtifacts are for substantia... [truncated]",
+  modelsConfig: "exists",
+}
+2025-01-25T12:19:29.242Z debug: [AskController]
+{
+  text: "hmm",
+  conversationId: "26d4c7ef-4dfb-413a-ae49-3175e671ca87",
+  // 1 example(s)
+  examples: [{"input":{"content":""},"output":{"content":""}}],
+  endpoint: "google",
+  resendFiles: true,
+    modelOptions.model: "gemini-2.0-flash-thinking-exp-1219",
+  artifactsPrompt: "The assistant can create and reference artifacts during conversations.\n\nArtifacts are for substantia... [truncated]",
+  modelsConfig: "exists",
+}
+2025-01-25T12:19:29.271Z debug: [BaseClient] Loading history:
+{
+  conversationId: "26d4c7ef-4dfb-413a-ae49-3175e671ca87",
+  parentMessageId: "bb885f48-5404-4cda-bf59-82142ecedafd",
+}
+2025-01-25T12:19:29.275Z debug: [BaseClient] Loading history:
+{
+  conversationId: "26d4c7ef-4dfb-413a-ae49-3175e671ca87",
+  parentMessageId: "bb885f48-5404-4cda-bf59-82142ecedafd",
+}
+2025-01-25T12:19:29.283Z debug: Creating GenAI client
+2025-01-25T12:19:29.293Z debug: Creating GenAI client
+2025-01-25T12:19:29.304Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T12:19:32.618Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T12:19:32.632Z debug: [AskController] Request closed
+2025-01-25T12:19:32.763Z debug: [saveConvo] api/app/clients/BaseClient.js - saveMessageToDatabase #saveConvo
+2025-01-25T12:19:32.787Z debug: [AskController] Request closed
+2025-01-25T12:42:19.351Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T12:42:39.058Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T12:42:45.716Z info: Connected to MongoDB
+2025-01-25T12:42:46.052Z debug: [indexSync] There are 11 messages and 11 indexed
+2025-01-25T12:42:46.053Z debug: [indexSync] There are 4 convos and 4 indexed
+2025-01-25T12:42:46.128Z error: Config file YAML format is invalid: ENOENT: no such file or directory, open '/app/librechat.yaml'
+2025-01-25T12:42:46.131Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T12:42:46.132Z warn: Default value for CREDS_IV is being used.
+2025-01-25T12:42:46.134Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T12:42:46.135Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T12:42:46.136Z info: Please replace any default secret values.
+2025-01-25T12:42:46.137Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T12:42:46.151Z warn: RAG API is either not running or not reachable at http://rag_api:8000, you may experience errors with file uploads.
+2025-01-25T12:42:46.178Z info: No changes needed for 'USER' role permissions
+2025-01-25T12:42:46.182Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T12:42:46.193Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T12:42:47.291Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T12:42:47.703Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T12:46:22.447Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T12:46:39.769Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T12:46:52.798Z info: Connected to MongoDB
+2025-01-25T12:46:53.443Z debug: [indexSync] There are 11 messages and 11 indexed
+2025-01-25T12:46:53.445Z debug: [indexSync] There are 4 convos and 4 indexed
+2025-01-25T12:46:53.569Z error: Config file YAML format is invalid: ENOENT: no such file or directory, open '/app/librechat.yaml'
+2025-01-25T12:46:53.574Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T12:46:53.579Z warn: Default value for CREDS_IV is being used.
+2025-01-25T12:46:53.582Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T12:46:53.585Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T12:46:53.587Z info: Please replace any default secret values.
+2025-01-25T12:46:53.588Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T12:46:54.526Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T12:46:54.569Z info: No changes needed for 'USER' role permissions
+2025-01-25T12:46:54.579Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T12:46:54.601Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T12:47:05.914Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T12:47:06.084Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T12:48:17.211Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T12:50:21.959Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T12:50:28.783Z info: Connected to MongoDB
+2025-01-25T12:50:29.092Z debug: [indexSync] There are 11 messages and 11 indexed
+2025-01-25T12:50:29.093Z debug: [indexSync] There are 4 convos and 4 indexed
+2025-01-25T12:50:29.253Z error: bad indentation of a mapping entry (153:19)
+
+ 150 |   #   capabilities: ["code_interpreter", "retriev ...
+ 151 |   agents:
+ 152 |     (optional) Maxim... [truncated]
+2025-01-25T12:50:29.256Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T12:50:29.257Z warn: Default value for CREDS_IV is being used.
+2025-01-25T12:50:29.258Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T12:50:29.259Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T12:50:29.262Z info: Please replace any default secret values.
+2025-01-25T12:50:29.263Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T12:50:30.420Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T12:50:30.456Z info: No changes needed for 'USER' role permissions
+2025-01-25T12:50:30.460Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T12:50:30.479Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T12:50:35.314Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T12:50:35.808Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T12:51:12.663Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T12:51:36.497Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T12:51:41.232Z info: Connected to MongoDB
+2025-01-25T12:51:41.737Z debug: [indexSync] There are 11 messages and 11 indexed
+2025-01-25T12:51:41.739Z debug: [indexSync] There are 4 convos and 4 indexed
+2025-01-25T12:51:41.854Z error: bad indentation of a mapping entry (153:19)
+
+ 150 |   #   capabilities: ["code_interpreter", "retriev ...
+ 151 |   agents:
+ 152 |     (optional) Maxim... [truncated]
+2025-01-25T12:51:41.860Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T12:51:41.862Z warn: Default value for CREDS_IV is being used.
+2025-01-25T12:51:41.863Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T12:51:41.864Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T12:51:41.865Z info: Please replace any default secret values.
+2025-01-25T12:51:41.867Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T12:51:42.510Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T12:51:42.543Z info: No changes needed for 'USER' role permissions
+2025-01-25T12:51:42.550Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T12:51:42.571Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T12:51:47.582Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T12:51:48.170Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T12:52:28.199Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T12:57:15.351Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T12:57:21.235Z info: Connected to MongoDB
+2025-01-25T12:57:21.685Z debug: [indexSync] There are 11 messages and 11 indexed
+2025-01-25T12:57:21.685Z debug: [indexSync] There are 4 convos and 4 indexed
+2025-01-25T12:57:21.801Z error: bad indentation of a mapping entry (153:19)
+
+ 150 |   #   capabilities: ["code_interpreter", "retriev ...
+ 151 |   agents:
+ 152 |     (optional) Maxim... [truncated]
+2025-01-25T12:57:21.804Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T12:57:21.806Z warn: Default value for CREDS_IV is being used.
+2025-01-25T12:57:21.808Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T12:57:21.810Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T12:57:21.812Z info: Please replace any default secret values.
+2025-01-25T12:57:21.817Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T12:57:22.434Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T12:57:22.505Z info: No changes needed for 'USER' role permissions
+2025-01-25T12:57:22.513Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T12:57:22.535Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T12:57:24.400Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T12:57:24.955Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T12:58:32.852Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T13:02:02.001Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T13:02:07.135Z info: Connected to MongoDB
+2025-01-25T13:02:07.473Z debug: [indexSync] There are 11 messages and 11 indexed
+2025-01-25T13:02:07.473Z debug: [indexSync] There are 4 convos and 4 indexed
+2025-01-25T13:02:07.547Z error: bad indentation of a mapping entry (153:19)
+
+ 150 |   #   capabilities: ["code_interpreter", "retriev ...
+ 151 |   agents:
+ 152 |     (optional) Maxim... [truncated]
+2025-01-25T13:02:07.549Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T13:02:07.551Z warn: Default value for CREDS_IV is being used.
+2025-01-25T13:02:07.552Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T13:02:07.553Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T13:02:07.555Z info: Please replace any default secret values.
+2025-01-25T13:02:07.557Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T13:02:08.475Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T13:02:08.507Z info: No changes needed for 'USER' role permissions
+2025-01-25T13:02:08.510Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T13:02:08.524Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T13:02:14.173Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T13:02:14.784Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T13:02:26.437Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T13:04:14.622Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T13:04:19.228Z info: Connected to MongoDB
+2025-01-25T13:04:19.826Z debug: [indexSync] There are 11 messages and 11 indexed
+2025-01-25T13:04:19.826Z debug: [indexSync] There are 4 convos and 4 indexed
+2025-01-25T13:04:19.924Z error: bad indentation of a mapping entry (153:19)
+
+ 150 |   #   capabilities: ["code_interpreter", "retriev ...
+ 151 |   agents:
+ 152 |     (optional) Maxim... [truncated]
+2025-01-25T13:04:19.926Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T13:04:19.928Z warn: Default value for CREDS_IV is being used.
+2025-01-25T13:04:19.930Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T13:04:19.932Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T13:04:19.933Z info: Please replace any default secret values.
+2025-01-25T13:04:19.934Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T13:04:20.699Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T13:04:20.724Z info: No changes needed for 'USER' role permissions
+2025-01-25T13:04:20.728Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T13:04:20.742Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T13:04:22.008Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T13:04:22.408Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T13:04:58.523Z debug: [deleteAllUserSessions] Deleted 2 sessions for user 6794a1b30e50b72b60cedfa6.
+2025-01-25T13:04:59.285Z info: User deleted account. Email: vaibhavarduino@gmail.com ID: 6794a1b30e50b72b60cedfa6
+2025-01-25T13:05:21.555Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T13:11:41.156Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T13:11:45.782Z info: Connected to MongoDB
+2025-01-25T13:11:45.989Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T13:11:45.989Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T13:11:46.055Z error: bad indentation of a mapping entry (153:19)
+
+ 150 |   #   capabilities: ["code_interpreter", "retriev ...
+ 151 |   agents:
+ 152 |     (optional) Maxim... [truncated]
+2025-01-25T13:11:46.057Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T13:11:46.058Z warn: Default value for CREDS_IV is being used.
+2025-01-25T13:11:46.059Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T13:11:46.060Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T13:11:46.061Z info: Please replace any default secret values.
+2025-01-25T13:11:46.062Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T13:11:46.831Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T13:11:46.867Z info: No changes needed for 'USER' role permissions
+2025-01-25T13:11:46.871Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T13:11:46.884Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T13:12:00.559Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T13:14:06.316Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T13:14:11.223Z info: Connected to MongoDB
+2025-01-25T13:14:11.554Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T13:14:11.555Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T13:14:11.638Z error: bad indentation of a mapping entry (153:19)
+
+ 150 |   #   capabilities: ["code_interpreter", "retriev ...
+ 151 |   agents:
+ 152 |     (optional) Maxim... [truncated]
+2025-01-25T13:14:11.642Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T13:14:11.645Z warn: Default value for CREDS_IV is being used.
+2025-01-25T13:14:11.647Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T13:14:11.648Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T13:14:11.650Z info: Please replace any default secret values.
+2025-01-25T13:14:11.652Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T13:14:12.342Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T13:14:12.391Z info: No changes needed for 'USER' role permissions
+2025-01-25T13:14:12.396Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T13:14:12.424Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T13:14:34.437Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T13:14:51.899Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T13:14:55.816Z info: Connected to MongoDB
+2025-01-25T13:14:56.172Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T13:14:56.172Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T13:14:56.268Z info: Custom config file loaded:
+2025-01-25T13:14:56.269Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T13:14:56.271Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 3 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com"],
+    everything.url: "http://localhost:3001/sse",
+    puppeteer.type: "stdio",
+    puppeteer.command: "npx",
+    // 2 arg(s)
+    puppeteer.args: ["-y","@modelcontextprotocol/server-puppeteer"],
+    filesystem.command: "npx",
+    // 3 arg(s)
+    filesystem.args: ["-y","@modelcontextprotocol/server-filesystem","/home/user/LibreChat/"],
+    filesystem.iconPath: "/home/user/LibreChat/client/public/assets/logo.svg",
+    mcp-obsidian.command: "npx",
+    // 3 arg(s)
+    mcp-obsidian.args: ["-y","mcp-obsidian","/path/to/obsidian/vault"],
+    agents.recursionLimit: 50,
+    agents.disableBuilder: true,
+    agents.capabilities: ,
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T13:14:56.276Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T13:14:56.277Z warn: Default value for CREDS_IV is being used.
+2025-01-25T13:14:56.278Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T13:14:56.279Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T13:14:56.279Z info: Please replace any default secret values.
+2025-01-25T13:14:56.280Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T13:14:57.070Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T13:14:57.137Z info: [MCP] Initializing servers
+2025-01-25T13:14:57.141Z info: [MCP][everything] Connection state: connecting
+2025-01-25T13:14:57.143Z info: [MCP][everything] Creating SSE transport: http://localhost:3001/sse
+2025-01-25T13:14:57.150Z info: [MCP][puppeteer] Connection state: connecting
+2025-01-25T13:14:57.160Z info: [MCP][filesystem] Connection state: connecting
+2025-01-25T13:14:57.165Z info: [MCP][mcp-obsidian] Connection state: connecting
+2025-01-25T13:14:57.172Z debug: [MCP][puppeteer] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat-... [truncated]
+2025-01-25T13:14:57.172Z debug: [MCP][filesystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat... [truncated]
+2025-01-25T13:14:57.173Z debug: [MCP][mcp-obsidian] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T13:14:57.177Z info: [MCP][everything] Connection state: error
+2025-01-25T13:14:57.181Z error: [MCP][everything] Connection failed: SSE error: {}
+2025-01-25T13:14:59.184Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T13:14:59.185Z info: [MCP][everything] Connection state: connecting
+2025-01-25T13:14:59.186Z info: [MCP][everything] Creating SSE transport: http://localhost:3001/sse
+2025-01-25T13:14:59.193Z info: [MCP][everything] Connection state: error
+2025-01-25T13:14:59.194Z error: [MCP][everything] Connection failed: SSE error: {}
+2025-01-25T13:15:03.206Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T13:15:03.209Z info: [MCP][everything] Connection state: connecting
+2025-01-25T13:15:03.210Z info: [MCP][everything] Creating SSE transport: http://localhost:3001/sse
+2025-01-25T13:15:03.215Z info: [MCP][everything] Connection state: error
+2025-01-25T13:15:03.225Z error: [MCP][everything] Connection failed: SSE error: {}
+2025-01-25T13:15:03.226Z error: [MCP][everything] Failed after 3 attempts
+2025-01-25T13:15:03.227Z error: [MCP][everything] Initialization failed SSE error: {}
+2025-01-25T13:15:07.160Z info: [MCP][puppeteer] Connection state: error
+2025-01-25T13:15:07.161Z error: [MCP][puppeteer] Connection failed: Connection timeout
+2025-01-25T13:15:07.165Z info: [MCP][filesystem] Connection state: error
+2025-01-25T13:15:07.166Z error: [MCP][filesystem] Connection failed: Connection timeout
+2025-01-25T13:15:07.170Z info: [MCP][mcp-obsidian] Connection state: error
+2025-01-25T13:15:07.171Z error: [MCP][mcp-obsidian] Connection failed: Connection timeout
+2025-01-25T13:15:09.163Z info: [MCP][puppeteer] Connection state: disconnected
+2025-01-25T13:15:09.164Z info: [MCP][puppeteer] Connection state: connecting
+2025-01-25T13:15:09.168Z debug: [MCP][puppeteer] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat-... [truncated]
+2025-01-25T13:15:09.169Z info: [MCP][filesystem] Connection state: disconnected
+2025-01-25T13:15:09.170Z info: [MCP][filesystem] Connection state: connecting
+2025-01-25T13:15:09.173Z debug: [MCP][filesystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat... [truncated]
+2025-01-25T13:15:09.182Z info: [MCP][mcp-obsidian] Connection state: disconnected
+2025-01-25T13:15:09.182Z info: [MCP][mcp-obsidian] Connection state: connecting
+2025-01-25T13:15:09.187Z debug: [MCP][mcp-obsidian] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T13:15:09.191Z info: [MCP][puppeteer] Connection state: error
+2025-01-25T13:15:09.196Z error: [MCP][puppeteer] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:15:09.210Z info: [MCP][mcp-obsidian] Connection state: error
+2025-01-25T13:15:09.211Z error: [MCP][mcp-obsidian] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:15:09.212Z info: [MCP][filesystem] Connection state: error
+2025-01-25T13:15:09.213Z error: [MCP][filesystem] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:15:13.211Z info: [MCP][puppeteer] Connection state: disconnected
+2025-01-25T13:15:13.218Z info: [MCP][puppeteer] Connection state: connecting
+2025-01-25T13:15:13.233Z debug: [MCP][puppeteer] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat-... [truncated]
+2025-01-25T13:15:13.234Z info: [MCP][mcp-obsidian] Connection state: disconnected
+2025-01-25T13:15:13.235Z info: [MCP][mcp-obsidian] Connection state: connecting
+2025-01-25T13:15:13.239Z debug: [MCP][mcp-obsidian] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T13:15:13.239Z info: [MCP][filesystem] Connection state: disconnected
+2025-01-25T13:15:13.250Z info: [MCP][filesystem] Connection state: connecting
+2025-01-25T13:15:13.265Z debug: [MCP][filesystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat... [truncated]
+2025-01-25T13:15:23.242Z info: [MCP][puppeteer] Connection state: error
+2025-01-25T13:15:23.247Z error: [MCP][puppeteer] Connection failed: Connection timeout
+2025-01-25T13:15:23.247Z error: [MCP][puppeteer] Failed after 3 attempts
+2025-01-25T13:15:23.248Z error: [MCP][puppeteer] Initialization failed Connection timeout
+2025-01-25T13:15:23.248Z info: [MCP][mcp-obsidian] Connection state: error
+2025-01-25T13:15:23.249Z error: [MCP][mcp-obsidian] Connection failed: Connection timeout
+2025-01-25T13:15:23.249Z error: [MCP][mcp-obsidian] Failed after 3 attempts
+2025-01-25T13:15:23.250Z error: [MCP][mcp-obsidian] Initialization failed Connection timeout
+2025-01-25T13:15:23.261Z info: [MCP][filesystem] Connection state: error
+2025-01-25T13:15:23.270Z error: [MCP][filesystem] Connection failed: Connection timeout
+2025-01-25T13:15:23.272Z error: [MCP][filesystem] Failed after 3 attempts
+2025-01-25T13:15:23.273Z error: [MCP][filesystem] Initialization failed Connection timeout
+2025-01-25T13:15:23.273Z info: [MCP] Initialized 0/4 server(s)
+2025-01-25T13:15:23.276Z warn: [MCP] 4/4 server(s) failed to initialize
+2025-01-25T13:15:23.278Z info: [MCP][everything] ✗ Failed
+2025-01-25T13:15:23.280Z info: [MCP][puppeteer] ✗ Failed
+2025-01-25T13:15:23.281Z info: [MCP][filesystem] ✗ Failed
+2025-01-25T13:15:23.281Z info: [MCP][mcp-obsidian] ✗ Failed
+2025-01-25T13:15:23.282Z error: [MCP] No servers initialized
+2025-01-25T13:15:23.299Z info: No changes needed for 'USER' role permissions
+2025-01-25T13:15:23.306Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T13:15:23.355Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T13:15:26.563Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T13:15:27.842Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T13:15:29.089Z error: Failed to fetch models from Mistral API
+Something happened in setting up the request. Error message:
+ Invalid URL
+2025-01-25T13:15:29.714Z error: Failed to fetch models from Portkey API
+Something happened in setting up the request. Error message:
+ Invalid URL
+2025-01-25T13:15:46.969Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T13:16:51.539Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T13:16:55.577Z info: Connected to MongoDB
+2025-01-25T13:16:55.887Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T13:16:55.887Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T13:16:55.997Z info: Custom config file loaded:
+2025-01-25T13:16:55.999Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T13:16:56.004Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 3 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com"],
+    everything.url: "http://localhost:3001/sse",
+    puppeteer.type: "stdio",
+    puppeteer.command: "npx",
+    // 2 arg(s)
+    puppeteer.args: ["-y","@modelcontextprotocol/server-puppeteer"],
+    filesystem.command: "npx",
+    // 3 arg(s)
+    filesystem.args: ["-y","@modelcontextprotocol/server-filesystem","/home/user/LibreChat/"],
+    filesystem.iconPath: "/home/user/LibreChat/client/public/assets/logo.svg",
+    mcp-obsidian.command: "npx",
+    // 3 arg(s)
+    mcp-obsidian.args: ["-y","mcp-obsidian","/path/to/obsidian/vault"],
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 4 capabilitie(s)
+    agents.capabilities: ["execute_code","file_search","actions","tools"],
+    // 4 capabilitie(s)
+    google.capabilities: ["execute_code","file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T13:16:56.014Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T13:16:56.015Z warn: Default value for CREDS_IV is being used.
+2025-01-25T13:16:56.015Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T13:16:56.017Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T13:16:56.017Z info: Please replace any default secret values.
+2025-01-25T13:16:56.018Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T13:16:56.765Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T13:16:56.852Z info: [MCP] Initializing servers
+2025-01-25T13:16:56.860Z info: [MCP][everything] Connection state: connecting
+2025-01-25T13:16:56.863Z info: [MCP][everything] Creating SSE transport: http://localhost:3001/sse
+2025-01-25T13:16:56.869Z info: [MCP][puppeteer] Connection state: connecting
+2025-01-25T13:16:56.880Z info: [MCP][filesystem] Connection state: connecting
+2025-01-25T13:16:56.888Z info: [MCP][mcp-obsidian] Connection state: connecting
+2025-01-25T13:16:56.893Z debug: [MCP][puppeteer] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat-... [truncated]
+2025-01-25T13:16:56.894Z debug: [MCP][filesystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat... [truncated]
+2025-01-25T13:16:56.894Z debug: [MCP][mcp-obsidian] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T13:16:56.901Z info: [MCP][everything] Connection state: error
+2025-01-25T13:16:56.907Z error: [MCP][everything] Connection failed: SSE error: {}
+2025-01-25T13:16:58.909Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T13:16:58.910Z info: [MCP][everything] Connection state: connecting
+2025-01-25T13:16:58.910Z info: [MCP][everything] Creating SSE transport: http://localhost:3001/sse
+2025-01-25T13:16:58.913Z info: [MCP][everything] Connection state: error
+2025-01-25T13:16:58.914Z error: [MCP][everything] Connection failed: SSE error: {}
+2025-01-25T13:17:02.920Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T13:17:02.924Z info: [MCP][everything] Connection state: connecting
+2025-01-25T13:17:02.928Z info: [MCP][everything] Creating SSE transport: http://localhost:3001/sse
+2025-01-25T13:17:02.936Z info: [MCP][everything] Connection state: error
+2025-01-25T13:17:02.937Z error: [MCP][everything] Connection failed: SSE error: {}
+2025-01-25T13:17:02.937Z error: [MCP][everything] Failed after 3 attempts
+2025-01-25T13:17:02.948Z error: [MCP][everything] Initialization failed SSE error: {}
+2025-01-25T13:17:06.880Z info: [MCP][puppeteer] Connection state: error
+2025-01-25T13:17:06.883Z error: [MCP][puppeteer] Connection failed: Connection timeout
+2025-01-25T13:17:06.890Z info: [MCP][filesystem] Connection state: error
+2025-01-25T13:17:06.891Z error: [MCP][filesystem] Connection failed: Connection timeout
+2025-01-25T13:17:06.892Z info: [MCP][mcp-obsidian] Connection state: error
+2025-01-25T13:17:06.893Z error: [MCP][mcp-obsidian] Connection failed: Connection timeout
+2025-01-25T13:17:08.892Z info: [MCP][puppeteer] Connection state: disconnected
+2025-01-25T13:17:08.894Z info: [MCP][puppeteer] Connection state: connecting
+2025-01-25T13:17:08.900Z debug: [MCP][puppeteer] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat-... [truncated]
+2025-01-25T13:17:08.900Z info: [MCP][filesystem] Connection state: disconnected
+2025-01-25T13:17:08.900Z info: [MCP][filesystem] Connection state: connecting
+2025-01-25T13:17:08.904Z debug: [MCP][filesystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat... [truncated]
+2025-01-25T13:17:08.904Z info: [MCP][mcp-obsidian] Connection state: disconnected
+2025-01-25T13:17:08.905Z info: [MCP][mcp-obsidian] Connection state: connecting
+2025-01-25T13:17:08.908Z debug: [MCP][mcp-obsidian] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T13:17:08.911Z info: [MCP][puppeteer] Connection state: error
+2025-01-25T13:17:08.913Z error: [MCP][puppeteer] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:17:12.914Z info: [MCP][puppeteer] Connection state: disconnected
+2025-01-25T13:17:12.916Z info: [MCP][puppeteer] Connection state: connecting
+2025-01-25T13:17:12.919Z debug: [MCP][puppeteer] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat-... [truncated]
+2025-01-25T13:17:16.182Z info: [MCP][mcp-obsidian] Connection state: error
+2025-01-25T13:17:16.183Z error: [MCP][mcp-obsidian] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:17:16.260Z info: [MCP][filesystem] Connection state: error
+2025-01-25T13:17:16.262Z error: [MCP][filesystem] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:17:18.653Z debug: [MCP][puppeteer] Transport sending: {"method":"notifications/initialized","jsonrpc":"2.0"}
+2025-01-25T13:17:18.653Z info: [MCP][puppeteer] Connection state: connected
+2025-01-25T13:17:18.654Z info: [MCP][puppeteer] Capabilities: {"resources":{},"tools":{}}
+2025-01-25T13:17:18.654Z debug: [MCP][puppeteer] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":3}
+2025-01-25T13:17:18.663Z info: [MCP][puppeteer] Available tools: puppeteer_navigate, puppeteer_screenshot, puppeteer_click, puppeteer_fill, puppeteer_select, puppeteer_hover, puppet... [truncated]
+2025-01-25T13:17:20.184Z info: [MCP][mcp-obsidian] Connection state: disconnected
+2025-01-25T13:17:20.184Z info: [MCP][mcp-obsidian] Connection state: connecting
+2025-01-25T13:17:20.187Z debug: [MCP][mcp-obsidian] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T13:17:20.263Z info: [MCP][filesystem] Connection state: disconnected
+2025-01-25T13:17:20.263Z info: [MCP][filesystem] Connection state: connecting
+2025-01-25T13:17:20.267Z debug: [MCP][filesystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat... [truncated]
+2025-01-25T13:17:25.175Z info: [MCP][filesystem] Connection state: error
+2025-01-25T13:17:25.176Z error: [MCP][filesystem] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:17:25.177Z error: [MCP][filesystem] Failed after 3 attempts
+2025-01-25T13:17:25.178Z error: [MCP][filesystem] Initialization failed MCP error -1: Connection closed
+2025-01-25T13:17:25.208Z info: [MCP][mcp-obsidian] Connection state: error
+2025-01-25T13:17:25.209Z error: [MCP][mcp-obsidian] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:17:25.210Z error: [MCP][mcp-obsidian] Failed after 3 attempts
+2025-01-25T13:17:25.212Z error: [MCP][mcp-obsidian] Initialization failed MCP error -1: Connection closed
+2025-01-25T13:17:25.212Z info: [MCP] Initialized 1/4 server(s)
+2025-01-25T13:17:25.213Z warn: [MCP] 3/4 server(s) failed to initialize
+2025-01-25T13:17:25.214Z info: [MCP][everything] ✗ Failed
+2025-01-25T13:17:25.214Z info: [MCP][puppeteer] ✓ Initialized
+2025-01-25T13:17:25.215Z info: [MCP][filesystem] ✗ Failed
+2025-01-25T13:17:25.216Z info: [MCP][mcp-obsidian] ✗ Failed
+2025-01-25T13:17:25.219Z debug: [MCP][puppeteer] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":4}
+2025-01-25T13:17:25.232Z info: No changes needed for 'USER' role permissions
+2025-01-25T13:17:25.237Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T13:17:25.259Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T13:17:30.921Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T13:17:31.440Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T13:17:31.865Z error: Failed to fetch models from Mistral API
+Something happened in setting up the request. Error message:
+ Invalid URL
+2025-01-25T13:17:33.480Z error: Failed to fetch models from Portkey API
+Something happened in setting up the request. Error message:
+ Invalid URL
+2025-01-25T13:17:33.705Z debug: [MCP][puppeteer] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":5}
+2025-01-25T13:18:10.193Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T13:24:15.527Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T13:24:23.299Z info: Connected to MongoDB
+2025-01-25T13:24:23.736Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T13:24:23.737Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T13:24:23.864Z info: Custom config file loaded:
+2025-01-25T13:24:23.865Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T13:24:23.869Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    filesystem.command: "npx",
+    // 3 arg(s)
+    filesystem.args: ["-y","@modelcontextprotocol/server-filesystem","/home/user/LibreChat/"],
+    filesystem.iconPath: "/home/user/LibreChat/client/public/assets/logo.svg",
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 4 capabilitie(s)
+    agents.capabilities: ["execute_code","file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T13:24:23.875Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T13:24:23.876Z warn: Default value for CREDS_IV is being used.
+2025-01-25T13:24:23.876Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T13:24:23.878Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T13:24:23.880Z info: Please replace any default secret values.
+2025-01-25T13:24:23.882Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T13:24:24.596Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T13:24:24.639Z info: [MCP] Initializing servers
+2025-01-25T13:24:24.641Z info: [MCP][filesystem] Connection state: connecting
+2025-01-25T13:24:24.651Z debug: [MCP][filesystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat... [truncated]
+2025-01-25T13:24:33.339Z info: [MCP][filesystem] Connection state: error
+2025-01-25T13:24:33.341Z error: [MCP][filesystem] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:24:35.344Z info: [MCP][filesystem] Connection state: disconnected
+2025-01-25T13:24:35.345Z info: [MCP][filesystem] Connection state: connecting
+2025-01-25T13:24:35.353Z debug: [MCP][filesystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat... [truncated]
+2025-01-25T13:24:38.803Z info: [MCP][filesystem] Connection state: error
+2025-01-25T13:24:38.804Z error: [MCP][filesystem] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:24:42.807Z info: [MCP][filesystem] Connection state: disconnected
+2025-01-25T13:24:42.808Z info: [MCP][filesystem] Connection state: connecting
+2025-01-25T13:24:42.811Z debug: [MCP][filesystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat... [truncated]
+2025-01-25T13:24:46.200Z info: [MCP][filesystem] Connection state: error
+2025-01-25T13:24:46.201Z error: [MCP][filesystem] Connection failed: MCP error -1: Connection closed
+2025-01-25T13:24:46.202Z error: [MCP][filesystem] Failed after 3 attempts
+2025-01-25T13:24:46.202Z error: [MCP][filesystem] Initialization failed MCP error -1: Connection closed
+2025-01-25T13:24:46.203Z info: [MCP] Initialized 0/1 server(s)
+2025-01-25T13:24:46.203Z warn: [MCP] 1/1 server(s) failed to initialize
+2025-01-25T13:24:46.204Z info: [MCP][filesystem] ✗ Failed
+2025-01-25T13:24:46.204Z error: [MCP] No servers initialized
+2025-01-25T13:24:46.209Z info: No changes needed for 'USER' role permissions
+2025-01-25T13:24:46.213Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T13:24:46.222Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T13:24:46.322Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T13:25:55.437Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T13:26:00.152Z info: Connected to MongoDB
+2025-01-25T13:26:00.467Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T13:26:00.468Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T13:26:00.612Z info: Custom config file loaded:
+2025-01-25T13:26:00.614Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T13:26:00.623Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    filesystem.command: "npx",
+    // 3 arg(s)
+    filesystem.args: ["-y","@modelcontextprotocol/server-filesystem","/home"],
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T13:26:00.630Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T13:26:00.632Z warn: Default value for CREDS_IV is being used.
+2025-01-25T13:26:00.632Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T13:26:00.634Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T13:26:00.635Z info: Please replace any default secret values.
+2025-01-25T13:26:00.636Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T13:26:01.242Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T13:26:01.298Z info: [MCP] Initializing servers
+2025-01-25T13:26:01.302Z info: [MCP][filesystem] Connection state: connecting
+2025-01-25T13:26:01.311Z debug: [MCP][filesystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librechat... [truncated]
+2025-01-25T13:26:09.250Z debug: [MCP][filesystem] Transport sending: {"method":"notifications/initialized","jsonrpc":"2.0"}
+2025-01-25T13:26:09.251Z info: [MCP][filesystem] Connection state: connected
+2025-01-25T13:26:09.251Z info: [MCP][filesystem] Capabilities: {"tools":{}}
+2025-01-25T13:26:09.252Z debug: [MCP][filesystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":1}
+2025-01-25T13:26:09.258Z info: [MCP][filesystem] Available tools: read_file, read_multiple_files, write_file, edit_file, create_directory, list_directory, directory_tree, move_file,... [truncated]
+2025-01-25T13:26:09.259Z info: [MCP] Initialized 1/1 server(s)
+2025-01-25T13:26:09.259Z info: [MCP][filesystem] ✓ Initialized
+2025-01-25T13:26:09.259Z info: [MCP] All servers initialized successfully
+2025-01-25T13:26:09.261Z debug: [MCP][filesystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":2}
+2025-01-25T13:26:09.268Z info: No changes needed for 'USER' role permissions
+2025-01-25T13:26:09.270Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T13:26:09.276Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T13:26:31.696Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T13:26:32.290Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T13:26:32.820Z error: Failed to fetch models from Mistral API
+Something happened in setting up the request. Error message:
+ Invalid URL
+2025-01-25T13:26:34.374Z error: Failed to fetch models from Portkey API
+Something happened in setting up the request. Error message:
+ Invalid URL
+2025-01-25T13:26:34.653Z debug: [MCP][filesystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":3}
+2025-01-25T13:49:03.817Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T13:49:27.213Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T13:49:31.881Z info: Connected to MongoDB
+2025-01-25T13:49:32.090Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T13:49:32.090Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T13:49:32.196Z info: Custom config file loaded:
+2025-01-25T13:49:32.197Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T13:49:32.199Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    filesssystem.command: "npx",
+    // 3 arg(s)
+    filesssystem.args: ["-y","@modelcontextprotocol/server-filesystem","/home"],
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T13:49:32.208Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T13:49:32.210Z warn: Default value for CREDS_IV is being used.
+2025-01-25T13:49:32.211Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T13:49:32.212Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T13:49:32.213Z info: Please replace any default secret values.
+2025-01-25T13:49:32.214Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T13:49:32.955Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T13:49:33.020Z info: [MCP] Initializing servers
+2025-01-25T13:49:33.023Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T13:49:33.031Z debug: [MCP][filesssystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T13:49:42.506Z debug: [MCP][filesssystem] Transport sending: {"method":"notifications/initialized","jsonrpc":"2.0"}
+2025-01-25T13:49:42.506Z info: [MCP][filesssystem] Connection state: connected
+2025-01-25T13:49:42.506Z info: [MCP][filesssystem] Capabilities: {"tools":{}}
+2025-01-25T13:49:42.507Z debug: [MCP][filesssystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":1}
+2025-01-25T13:49:42.514Z info: [MCP][filesssystem] Available tools: read_file, read_multiple_files, write_file, edit_file, create_directory, list_directory, directory_tree, move_fil... [truncated]
+2025-01-25T13:49:42.515Z info: [MCP] Initialized 1/1 server(s)
+2025-01-25T13:49:42.515Z info: [MCP][filesssystem] ✓ Initialized
+2025-01-25T13:49:42.516Z info: [MCP] All servers initialized successfully
+2025-01-25T13:49:42.516Z debug: [MCP][filesssystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":2}
+2025-01-25T13:49:42.526Z info: No changes needed for 'USER' role permissions
+2025-01-25T13:49:42.530Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T13:49:42.538Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T13:49:49.386Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T14:22:34.374Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T14:22:39.355Z info: Connected to MongoDB
+2025-01-25T14:22:39.675Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T14:22:39.676Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T14:22:39.786Z info: Custom config file loaded:
+2025-01-25T14:22:39.787Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T14:22:39.792Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    filesssystem.type: "stdio",
+    filesssystem.command: "python",
+    // 1 arg(s)
+    filesssystem.args: ["C:/Users/vaibhavarduino/Documents/Python_Scripts/Auto-GPT-Actuallyworks/freegpt/gpt4free/opengpt+/d... [truncated]],
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T14:22:39.802Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T14:22:39.803Z warn: Default value for CREDS_IV is being used.
+2025-01-25T14:22:39.804Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T14:22:39.805Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T14:22:39.806Z info: Please replace any default secret values.
+2025-01-25T14:22:39.808Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T14:22:40.395Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T14:22:40.437Z info: [MCP] Initializing servers
+2025-01-25T14:22:40.440Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T14:22:40.452Z info: [MCP][filesssystem] Connection state: error
+2025-01-25T14:22:40.455Z error: [MCP][filesssystem] Connection failed: spawn python ENOENT
+2025-01-25T14:22:42.457Z info: [MCP][filesssystem] Connection state: disconnected
+2025-01-25T14:22:42.458Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T14:22:42.463Z info: [MCP][filesssystem] Connection state: error
+2025-01-25T14:22:42.464Z error: [MCP][filesssystem] Connection failed: spawn python ENOENT
+2025-01-25T14:22:46.466Z info: [MCP][filesssystem] Connection state: disconnected
+2025-01-25T14:22:46.468Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T14:22:46.474Z info: [MCP][filesssystem] Connection state: error
+2025-01-25T14:22:46.475Z error: [MCP][filesssystem] Connection failed: spawn python ENOENT
+2025-01-25T14:22:46.477Z error: [MCP][filesssystem] Failed after 3 attempts
+2025-01-25T14:22:46.478Z error: [MCP][filesssystem] Initialization failed spawn python ENOENT
+2025-01-25T14:22:46.479Z info: [MCP] Initialized 0/1 server(s)
+2025-01-25T14:22:46.480Z warn: [MCP] 1/1 server(s) failed to initialize
+2025-01-25T14:22:46.480Z info: [MCP][filesssystem] ✗ Failed
+2025-01-25T14:22:46.481Z error: [MCP] No servers initialized
+2025-01-25T14:22:46.488Z info: No changes needed for 'USER' role permissions
+2025-01-25T14:22:46.491Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T14:22:46.503Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T14:22:50.893Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T14:30:12.840Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T14:30:17.850Z info: Connected to MongoDB
+2025-01-25T14:30:18.251Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T14:30:18.252Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T14:30:18.365Z info: Custom config file loaded:
+2025-01-25T14:30:18.366Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T14:30:18.370Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    everything.url: "http://localhost:8000/sse",
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T14:30:18.377Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T14:30:18.378Z warn: Default value for CREDS_IV is being used.
+2025-01-25T14:30:18.379Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T14:30:18.381Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T14:30:18.382Z info: Please replace any default secret values.
+2025-01-25T14:30:18.383Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T14:30:19.079Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T14:30:19.126Z info: [MCP] Initializing servers
+2025-01-25T14:30:19.128Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:30:19.129Z info: [MCP][everything] Creating SSE transport: http://localhost:8000/sse
+2025-01-25T14:30:19.136Z info: [MCP][everything] Connection state: error
+2025-01-25T14:30:19.139Z error: [MCP][everything] Connection failed: SSE error: {}
+2025-01-25T14:30:21.140Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T14:30:21.141Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:30:21.142Z info: [MCP][everything] Creating SSE transport: http://localhost:8000/sse
+2025-01-25T14:30:21.145Z info: [MCP][everything] Connection state: error
+2025-01-25T14:30:21.147Z error: [MCP][everything] Connection failed: SSE error: {}
+2025-01-25T14:30:25.148Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T14:30:25.149Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:30:25.150Z info: [MCP][everything] Creating SSE transport: http://localhost:8000/sse
+2025-01-25T14:30:25.154Z info: [MCP][everything] Connection state: error
+2025-01-25T14:30:25.155Z error: [MCP][everything] Connection failed: SSE error: {}
+2025-01-25T14:30:25.156Z error: [MCP][everything] Failed after 3 attempts
+2025-01-25T14:30:25.157Z error: [MCP][everything] Initialization failed SSE error: {}
+2025-01-25T14:30:25.158Z info: [MCP] Initialized 0/1 server(s)
+2025-01-25T14:30:25.158Z warn: [MCP] 1/1 server(s) failed to initialize
+2025-01-25T14:30:25.159Z info: [MCP][everything] ✗ Failed
+2025-01-25T14:30:25.159Z error: [MCP] No servers initialized
+2025-01-25T14:30:25.168Z info: No changes needed for 'USER' role permissions
+2025-01-25T14:30:25.173Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T14:30:25.189Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T14:31:19.896Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T14:31:35.360Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T14:31:40.669Z info: Connected to MongoDB
+2025-01-25T14:31:40.882Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T14:31:40.882Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T14:31:40.975Z info: Custom config file loaded:
+2025-01-25T14:31:40.976Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T14:31:40.978Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    everything.url: "https://787d-182-69-182-121.ngrok-free.app/sse",
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T14:31:40.986Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T14:31:40.988Z warn: Default value for CREDS_IV is being used.
+2025-01-25T14:31:40.990Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T14:31:40.992Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T14:31:40.993Z info: Please replace any default secret values.
+2025-01-25T14:31:40.994Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T14:31:41.709Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T14:31:41.763Z info: [MCP] Initializing servers
+2025-01-25T14:31:41.767Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:31:41.769Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/sse
+2025-01-25T14:31:42.850Z info: [MCP][everything] Connection state: error
+2025-01-25T14:31:42.853Z error: [MCP][everything] Connection failed: SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:31:44.857Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T14:31:44.858Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:31:44.859Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/sse
+2025-01-25T14:31:45.612Z info: [MCP][everything] Connection state: error
+2025-01-25T14:31:45.613Z error: [MCP][everything] Connection failed: SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:31:49.615Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T14:31:49.617Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:31:49.618Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/sse
+2025-01-25T14:31:50.359Z info: [MCP][everything] Connection state: error
+2025-01-25T14:31:50.364Z error: [MCP][everything] Connection failed: SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:31:50.366Z error: [MCP][everything] Failed after 3 attempts
+2025-01-25T14:31:50.367Z error: [MCP][everything] Initialization failed SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:31:50.368Z info: [MCP] Initialized 0/1 server(s)
+2025-01-25T14:31:50.369Z warn: [MCP] 1/1 server(s) failed to initialize
+2025-01-25T14:31:50.370Z info: [MCP][everything] ✗ Failed
+2025-01-25T14:31:50.372Z error: [MCP] No servers initialized
+2025-01-25T14:31:50.379Z info: No changes needed for 'USER' role permissions
+2025-01-25T14:31:50.382Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T14:31:50.390Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T14:32:27.321Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T14:42:42.477Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T14:42:48.044Z info: Connected to MongoDB
+2025-01-25T14:42:48.595Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T14:42:48.595Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T14:42:48.730Z info: Custom config file loaded:
+2025-01-25T14:42:48.732Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T14:42:48.737Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    everything.url: "https://787d-182-69-182-121.ngrok-free.app/sse",
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T14:42:48.748Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T14:42:48.753Z warn: Default value for CREDS_IV is being used.
+2025-01-25T14:42:48.754Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T14:42:48.756Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T14:42:48.756Z info: Please replace any default secret values.
+2025-01-25T14:42:48.758Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T14:42:49.390Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T14:42:49.462Z info: [MCP] Initializing servers
+2025-01-25T14:42:49.467Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:42:49.469Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/sse
+2025-01-25T14:42:50.431Z info: [MCP][everything] Connection state: error
+2025-01-25T14:42:50.435Z error: [MCP][everything] Connection failed: SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:42:52.437Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T14:42:52.438Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:42:52.438Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/sse
+2025-01-25T14:42:53.171Z info: [MCP][everything] Connection state: error
+2025-01-25T14:42:53.172Z error: [MCP][everything] Connection failed: SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:42:57.176Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T14:42:57.177Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:42:57.178Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/sse
+2025-01-25T14:42:57.907Z info: [MCP][everything] Connection state: error
+2025-01-25T14:42:57.908Z error: [MCP][everything] Connection failed: SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:42:57.909Z error: [MCP][everything] Failed after 3 attempts
+2025-01-25T14:42:57.909Z error: [MCP][everything] Initialization failed SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:42:57.910Z info: [MCP] Initialized 0/1 server(s)
+2025-01-25T14:42:57.910Z warn: [MCP] 1/1 server(s) failed to initialize
+2025-01-25T14:42:57.911Z info: [MCP][everything] ✗ Failed
+2025-01-25T14:42:57.911Z error: [MCP] No servers initialized
+2025-01-25T14:42:57.921Z info: No changes needed for 'USER' role permissions
+2025-01-25T14:42:57.924Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T14:42:57.941Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T14:45:19.315Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T14:45:34.320Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T14:45:38.888Z info: Connected to MongoDB
+2025-01-25T14:45:39.262Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T14:45:39.262Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T14:45:39.409Z info: Custom config file loaded:
+2025-01-25T14:45:39.410Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T14:45:39.414Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    everything.type: "sse",
+    everything.url: "https://787d-182-69-182-121.ngrok-free.app/sse",
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T14:45:39.421Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T14:45:39.423Z warn: Default value for CREDS_IV is being used.
+2025-01-25T14:45:39.425Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T14:45:39.426Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T14:45:39.426Z info: Please replace any default secret values.
+2025-01-25T14:45:39.428Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T14:45:40.149Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T14:45:40.206Z info: [MCP] Initializing servers
+2025-01-25T14:45:40.208Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:45:40.209Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/sse
+2025-01-25T14:45:41.269Z info: [MCP][everything] Connection state: error
+2025-01-25T14:45:41.273Z error: [MCP][everything] Connection failed: SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:45:43.275Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T14:45:43.275Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:45:43.276Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/sse
+2025-01-25T14:45:44.014Z info: [MCP][everything] Connection state: error
+2025-01-25T14:45:44.015Z error: [MCP][everything] Connection failed: SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:45:48.018Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T14:45:48.019Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:45:48.019Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/sse
+2025-01-25T14:45:48.779Z info: [MCP][everything] Connection state: error
+2025-01-25T14:45:48.780Z error: [MCP][everything] Connection failed: SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:45:48.781Z error: [MCP][everything] Failed after 3 attempts
+2025-01-25T14:45:48.781Z error: [MCP][everything] Initialization failed SSE error: {"code":500,"message":"Non-200 status code (500)"}
+2025-01-25T14:45:48.782Z info: [MCP] Initialized 0/1 server(s)
+2025-01-25T14:45:48.783Z warn: [MCP] 1/1 server(s) failed to initialize
+2025-01-25T14:45:48.784Z info: [MCP][everything] ✗ Failed
+2025-01-25T14:45:48.785Z error: [MCP] No servers initialized
+2025-01-25T14:45:48.791Z info: No changes needed for 'USER' role permissions
+2025-01-25T14:45:48.793Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T14:45:48.804Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T14:47:33.919Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T14:47:50.437Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T14:47:57.046Z info: Connected to MongoDB
+2025-01-25T14:47:57.643Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T14:47:57.644Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T14:47:57.775Z info: Custom config file loaded:
+2025-01-25T14:47:57.777Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T14:47:57.782Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    everything.type: "sse",
+    everything.url: "https://787d-182-69-182-121.ngrok-free.app/",
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T14:47:57.792Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T14:47:57.794Z warn: Default value for CREDS_IV is being used.
+2025-01-25T14:47:57.796Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T14:47:57.799Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T14:47:57.800Z info: Please replace any default secret values.
+2025-01-25T14:47:57.802Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T14:47:58.732Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T14:47:58.779Z info: [MCP] Initializing servers
+2025-01-25T14:47:58.782Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:47:58.783Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/
+2025-01-25T14:47:59.951Z info: [MCP][everything] Connection state: error
+2025-01-25T14:47:59.954Z error: [MCP][everything] Connection failed: SSE error: {"code":200,"message":"Invalid content type, expected \"text/event-stream\""}
+2025-01-25T14:48:01.956Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T14:48:01.957Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:48:01.957Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/
+2025-01-25T14:48:02.473Z info: [MCP][everything] Connection state: error
+2025-01-25T14:48:02.474Z error: [MCP][everything] Connection failed: SSE error: {"code":200,"message":"Invalid content type, expected \"text/event-stream\""}
+2025-01-25T14:48:06.477Z info: [MCP][everything] Connection state: disconnected
+2025-01-25T14:48:06.478Z info: [MCP][everything] Connection state: connecting
+2025-01-25T14:48:06.480Z info: [MCP][everything] Creating SSE transport: https://787d-182-69-182-121.ngrok-free.app/
+2025-01-25T14:48:06.995Z info: [MCP][everything] Connection state: error
+2025-01-25T14:48:06.996Z error: [MCP][everything] Connection failed: SSE error: {"code":200,"message":"Invalid content type, expected \"text/event-stream\""}
+2025-01-25T14:48:06.996Z error: [MCP][everything] Failed after 3 attempts
+2025-01-25T14:48:06.997Z error: [MCP][everything] Initialization failed SSE error: {"code":200,"message":"Invalid content type, expected \"text/event-stream\""}
+2025-01-25T14:48:06.997Z info: [MCP] Initialized 0/1 server(s)
+2025-01-25T14:48:06.998Z warn: [MCP] 1/1 server(s) failed to initialize
+2025-01-25T14:48:06.998Z info: [MCP][everything] ✗ Failed
+2025-01-25T14:48:06.999Z error: [MCP] No servers initialized
+2025-01-25T14:48:07.004Z info: No changes needed for 'USER' role permissions
+2025-01-25T14:48:07.007Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T14:48:07.014Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T16:30:18.463Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T16:30:44.648Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T16:30:51.160Z info: Connected to MongoDB
+2025-01-25T16:30:51.987Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T16:30:51.990Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T16:30:52.165Z info: Custom config file loaded:
+2025-01-25T16:30:52.169Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T16:30:52.177Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    filesssystem.type: "stdio",
+    filesssystem.command: "python",
+    // 1 arg(s)
+    filesssystem.args: ["C:/Users/vaibhavarduino/Documents/Python_Scripts/Auto-GPT-Actuallyworks/freegpt/gpt4free/opengpt+/d... [truncated]],
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T16:30:52.192Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T16:30:52.193Z warn: Default value for CREDS_IV is being used.
+2025-01-25T16:30:52.194Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T16:30:52.196Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T16:30:52.197Z info: Please replace any default secret values.
+2025-01-25T16:30:52.198Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T16:30:53.465Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T16:30:53.567Z info: [MCP] Initializing servers
+2025-01-25T16:30:53.571Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T16:30:53.589Z info: [MCP][filesssystem] Connection state: error
+2025-01-25T16:30:53.592Z error: [MCP][filesssystem] Connection failed: spawn python ENOENT
+2025-01-25T16:30:55.593Z info: [MCP][filesssystem] Connection state: disconnected
+2025-01-25T16:30:55.594Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T16:30:55.603Z info: [MCP][filesssystem] Connection state: error
+2025-01-25T16:30:55.605Z error: [MCP][filesssystem] Connection failed: spawn python ENOENT
+2025-01-25T16:30:57.232Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T16:32:35.509Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T16:32:50.990Z info: Connected to MongoDB
+2025-01-25T16:32:51.791Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T16:32:51.791Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T16:32:52.009Z info: Custom config file loaded:
+2025-01-25T16:32:52.013Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T16:32:52.018Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    filesssystem.type: "stdio",
+    filesssystem.command: "python",
+    // 1 arg(s)
+    filesssystem.args: ["C:/Users/vaibhavarduino/Documents/Python_Scripts/Auto-GPT-Actuallyworks/freegpt/gpt4free/opengpt+/d... [truncated]],
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T16:32:52.040Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T16:32:52.042Z warn: Default value for CREDS_IV is being used.
+2025-01-25T16:32:52.047Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T16:32:52.048Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T16:32:52.050Z info: Please replace any default secret values.
+2025-01-25T16:32:52.052Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T16:32:53.696Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T16:32:53.894Z info: [MCP] Initializing servers
+2025-01-25T16:32:53.905Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T16:32:53.927Z info: [MCP][filesssystem] Connection state: error
+2025-01-25T16:32:53.931Z error: [MCP][filesssystem] Connection failed: spawn python ENOENT
+2025-01-25T16:32:55.933Z info: [MCP][filesssystem] Connection state: disconnected
+2025-01-25T16:32:55.935Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T16:32:55.948Z info: [MCP][filesssystem] Connection state: error
+2025-01-25T16:32:55.950Z error: [MCP][filesssystem] Connection failed: spawn python ENOENT
+2025-01-25T16:32:56.023Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T16:33:27.527Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T16:33:38.858Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T16:47:25.479Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T16:47:27.177Z info: Connected to MongoDB
+2025-01-25T16:47:27.446Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T16:47:27.446Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T16:47:27.504Z info: Custom config file loaded:
+2025-01-25T16:47:27.504Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T16:47:27.506Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    filesssystem.type: "stdio",
+    filesssystem.command: "python",
+    // 1 arg(s)
+    filesssystem.args: ["C:/Users/vaibhavarduino/Documents/Python_Scripts/Auto-GPT-Actuallyworks/freegpt/gpt4free/opengpt+/d... [truncated]],
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T16:47:27.510Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T16:47:27.510Z warn: Default value for CREDS_IV is being used.
+2025-01-25T16:47:27.511Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T16:47:27.511Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T16:47:27.512Z info: Please replace any default secret values.
+2025-01-25T16:47:27.513Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T16:47:27.936Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T16:47:27.963Z info: [MCP] Initializing servers
+2025-01-25T16:47:27.965Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T16:47:27.973Z debug: [MCP][filesssystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T16:47:27.989Z info: [MCP][filesssystem] Connection state: error
+2025-01-25T16:47:27.991Z error: [MCP][filesssystem] Connection failed: MCP error -1: Connection closed
+2025-01-25T16:47:29.991Z info: [MCP][filesssystem] Connection state: disconnected
+2025-01-25T16:47:29.992Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T16:47:29.998Z debug: [MCP][filesssystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T16:47:30.013Z info: [MCP][filesssystem] Connection state: error
+2025-01-25T16:47:30.014Z error: [MCP][filesssystem] Connection failed: MCP error -1: Connection closed
+2025-01-25T16:47:34.014Z info: [MCP][filesssystem] Connection state: disconnected
+2025-01-25T16:47:34.015Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T16:47:34.019Z debug: [MCP][filesssystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T16:47:34.041Z info: [MCP][filesssystem] Connection state: error
+2025-01-25T16:47:34.042Z error: [MCP][filesssystem] Connection failed: MCP error -1: Connection closed
+2025-01-25T16:47:34.042Z error: [MCP][filesssystem] Failed after 3 attempts
+2025-01-25T16:47:34.043Z error: [MCP][filesssystem] Initialization failed MCP error -1: Connection closed
+2025-01-25T16:47:34.043Z info: [MCP] Initialized 0/1 server(s)
+2025-01-25T16:47:34.043Z warn: [MCP] 1/1 server(s) failed to initialize
+2025-01-25T16:47:34.044Z info: [MCP][filesssystem] ✗ Failed
+2025-01-25T16:47:34.044Z error: [MCP] No servers initialized
+2025-01-25T16:47:34.048Z info: No changes needed for 'USER' role permissions
+2025-01-25T16:47:34.050Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T16:47:34.058Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T16:47:43.953Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T16:49:23.041Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T16:49:29.918Z info: Connected to MongoDB
+2025-01-25T16:49:30.167Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T16:49:30.168Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T16:49:30.262Z info: Custom config file loaded:
+2025-01-25T16:49:30.264Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T16:49:30.271Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    filesssystem.type: "stdio",
+    filesssystem.command: "python",
+    // 1 arg(s)
+    filesssystem.args: ["tests.py"],
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T16:49:30.279Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T16:49:30.280Z warn: Default value for CREDS_IV is being used.
+2025-01-25T16:49:30.281Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T16:49:30.282Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T16:49:30.282Z info: Please replace any default secret values.
+2025-01-25T16:49:30.285Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T16:49:31.150Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T16:49:31.238Z info: [MCP] Initializing servers
+2025-01-25T16:49:31.242Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T16:49:31.258Z debug: [MCP][filesssystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T16:49:32.734Z debug: [MCP][filesssystem] Transport sending: {"method":"notifications/initialized","jsonrpc":"2.0"}
+2025-01-25T16:49:32.734Z info: [MCP][filesssystem] Connection state: connected
+2025-01-25T16:49:32.735Z info: [MCP][filesssystem] Capabilities: {"experimental":{},"prompts":{"listChanged":false},"resources":{"subscribe":false,"listChanged":false},"tools":{"lis... [truncated]
+2025-01-25T16:49:32.736Z debug: [MCP][filesssystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":1}
+2025-01-25T16:49:32.746Z info: [MCP][filesssystem] Available tools: get_alerts, get_forecast
+2025-01-25T16:49:32.747Z info: [MCP] Initialized 1/1 server(s)
+2025-01-25T16:49:32.748Z info: [MCP][filesssystem] ✓ Initialized
+2025-01-25T16:49:32.749Z info: [MCP] All servers initialized successfully
+2025-01-25T16:49:32.750Z debug: [MCP][filesssystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":2}
+2025-01-25T16:49:32.764Z info: No changes needed for 'USER' role permissions
+2025-01-25T16:49:32.770Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T16:49:32.791Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T16:51:34.491Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T16:51:35.199Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T16:51:35.589Z error: Failed to fetch models from Mistral API
+Something happened in setting up the request. Error message:
+ Invalid URL
+2025-01-25T16:51:37.444Z error: Failed to fetch models from Portkey API
+Something happened in setting up the request. Error message:
+ Invalid URL
+2025-01-25T16:51:37.771Z debug: [MCP][filesssystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":3}
+2025-01-25T16:52:15.597Z debug: [indexSync] Clearing sync timeouts before exiting...
+2025-01-25T18:54:19.589Z info: [Optional] Redis not initialized. Note: Redis support is experimental.
+2025-01-25T18:54:24.922Z info: Connected to MongoDB
+2025-01-25T18:54:25.548Z debug: [indexSync] There are 0 messages and 0 indexed
+2025-01-25T18:54:25.549Z debug: [indexSync] There are 0 convos and 0 indexed
+2025-01-25T18:54:25.872Z info: Custom config file loaded:
+2025-01-25T18:54:25.875Z info: {
+  "version": "1.2.1",
+  "cache": true,
+  "interface": {
+    "privacyPolicy": {
+      "externalUrl": "https://librechat.ai/privacy-policy",
+      "op... [truncated]
+2025-01-25T18:54:25.881Z debug: Custom config:
+{
+  version: "1.2.1",
+  cache: true,
+    privacyPolicy.externalUrl: "https://librechat.ai/privacy-policy",
+    privacyPolicy.openNewTab: true,
+    termsOfService.externalUrl: "https://librechat.ai/tos",
+    termsOfService.openNewTab: true,
+    termsOfService.modalAcceptance: true,
+    termsOfService.modalTitle: "Terms of Service for LibreChat",
+    termsOfService.modalContent: "# Terms and Conditions for LibreChat\n\n*Effective Date: February 18, 2024*\n\nWelcome to LibreChat, the... [truncated]",
+    interface.endpointsMenu: true,
+    interface.modelSelect: true,
+    interface.parameters: true,
+    interface.sidePanel: true,
+    interface.presets: true,
+    interface.prompts: true,
+    interface.bookmarks: true,
+    interface.multiConvo: true,
+    interface.agents: true,
+    // 5 socialLogin(s)
+    registration.socialLogins: ["github","google","discord","openid","facebook"],
+    // 4 allowedDomain(s)
+    actions.allowedDomains: ["swapi.dev","librechat.ai","google.com","http://localhost:3080/"],
+    filesssystem.type: "stdio",
+    filesssystem.command: "python",
+    // 1 arg(s)
+    filesssystem.args: ["tests.py"],
+    agents.recursionLimit: 50,
+    agents.disableBuilder: false,
+    // 3 capabilitie(s)
+    agents.capabilities: ["file_search","actions","tools"],
+    // 4 custom(s)
+    endpoints.custom: [{"name":"groq","apiKey":"${GROQ_API_KEY}","baseURL":"https://api.groq.com/openai/v1/","models":{"def... [truncated],{"name":"Mistral","apiKey":"${MISTRAL_API_KEY}","baseURL":"https://api.mistral.ai/v1","models":{"def... [truncated],{"name":"OpenRouter","apiKey":"${OPENROUTER_KEY}","baseURL":"https://openrouter.ai/api/v1","models":... [truncated],{"name":"Portkey","apiKey":"dummy","baseURL":"https://api.portkey.ai/v1","headers":{"x-portkey-api-k... [truncated]],
+}
+2025-01-25T18:54:25.898Z warn: Default value for CREDS_KEY is being used.
+2025-01-25T18:54:25.899Z warn: Default value for CREDS_IV is being used.
+2025-01-25T18:54:25.901Z warn: Default value for JWT_SECRET is being used.
+2025-01-25T18:54:25.903Z warn: Default value for JWT_REFRESH_SECRET is being used.
+2025-01-25T18:54:25.904Z info: Please replace any default secret values.
+2025-01-25T18:54:25.906Z info: ​
+
+    For your convenience, use this tool to generate your own secret values:
+    https://www.librechat.ai/toolkit/creds_generator
+
+    ​
+2025-01-25T18:54:27.151Z info: RAG API is running and reachable at http://rag_api:8000.
+2025-01-25T18:54:27.238Z info: [MCP] Initializing servers
+2025-01-25T18:54:27.244Z info: [MCP][filesssystem] Connection state: connecting
+2025-01-25T18:54:27.266Z debug: [MCP][filesssystem] Transport sending: {"method":"initialize","params":{"protocolVersion":"2024-11-05","capabilities":{},"clientInfo":{"name":"librech... [truncated]
+2025-01-25T18:54:29.787Z debug: [MCP][filesssystem] Transport sending: {"method":"notifications/initialized","jsonrpc":"2.0"}
+2025-01-25T18:54:29.788Z info: [MCP][filesssystem] Connection state: connected
+2025-01-25T18:54:29.789Z info: [MCP][filesssystem] Capabilities: {"experimental":{},"prompts":{"listChanged":false},"resources":{"subscribe":false,"listChanged":false},"tools":{"lis... [truncated]
+2025-01-25T18:54:29.789Z debug: [MCP][filesssystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":1}
+2025-01-25T18:54:29.799Z info: [MCP][filesssystem] Available tools: get_alerts, get_forecast
+2025-01-25T18:54:29.800Z info: [MCP] Initialized 1/1 server(s)
+2025-01-25T18:54:29.801Z info: [MCP][filesssystem] ✓ Initialized
+2025-01-25T18:54:29.801Z info: [MCP] All servers initialized successfully
+2025-01-25T18:54:29.802Z debug: [MCP][filesssystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":2}
+2025-01-25T18:54:29.854Z info: No changes needed for 'USER' role permissions
+2025-01-25T18:54:29.858Z info: No changes needed for 'ADMIN' role permissions
+2025-01-25T18:54:29.900Z info: Server listening on all interfaces at port 3080. Use http://localhost:3080 to access it
+2025-01-25T18:55:01.019Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T18:55:01.729Z debug: [validateJson] files
+["\"Ai_PDF.json\"","\"BrowserOp.json\"","\"Dr_Thoths_Tarot.json\"","\"DreamInterpreter.json\"","\"VoxScript.json\"","\"askyourpdf.json\"","\"drink_maestro.json\"","\"earthImagesAndVisualizations.json\"","\"image_prompt_enhancer.json\"","\"qrCodes.json\"","\"scholarai.json\"","\"uberchord.json\"","\"web_search.json\""]
+2025-01-25T18:55:02.169Z error: Failed to fetch models from Mistral API
+Something happened in setting up the request. Error message:
+ Invalid URL
+2025-01-25T18:55:03.535Z error: Failed to fetch models from Portkey API
+Something happened in setting up the request. Error message:
+ Invalid URL
+2025-01-25T18:55:03.892Z debug: [MCP][filesssystem] Transport sending: {"method":"tools/list","jsonrpc":"2.0","id":3}
+2025-01-25T18:55:10.829Z debug: [indexSync] Clearing sync timeouts before exiting...

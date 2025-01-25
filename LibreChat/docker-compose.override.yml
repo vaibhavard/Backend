@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.override
+    volumes:
+      - type: bind
+        source: ./librechat.yaml
+        target: /app/librechat.yaml
+      - type: bind
+        source: ./tests.py
+        target: /app/tests.py
